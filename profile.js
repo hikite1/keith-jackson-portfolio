@@ -102,30 +102,3 @@ function rotateVideos() {
 }
 
 setInterval(rotateVideos, 5000); // Rotate every 5 seconds
-
-function enforceLandscape() {
-  const portraitMessage = document.getElementById('portrait-message');
-  const originalContent = document.getElementById('original-content');
-
-  if (window.innerHeight > window.innerWidth) {
-      // If in portrait mode, show the message and hide the content
-      if (portraitMessage) {
-          portraitMessage.style.display = 'flex';
-      }
-      if (originalContent) {
-          originalContent.style.display = 'none';
-      }
-  } else {
-      // If in landscape mode, hide the message and show the content
-      if (portraitMessage) {
-          portraitMessage.style.display = 'none';
-      }
-      if (originalContent) {
-          originalContent.style.display = 'block';
-      }
-  }
-}
-
-// Check orientation on load and resize
-window.addEventListener('load', enforceLandscape);
-window.addEventListener('resize', enforceLandscape);

@@ -385,35 +385,19 @@ body {
 
 
 
-/* Hide content in portrait mode */
+/* Force landscape view for portrait mode */
 @media screen and (orientation: portrait) {
     body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: black; /* Optional: Set a background color */
-        color: white; /* Optional: Set text color */
-        font-family: Arial, sans-serif;
-        text-align: center;
-    }
-
-    body * {
-        display: none; /* Hide all content */
-    }
-
-    body::before {
-        content: "Please rotate your device to landscape mode.";
-        display: block;
-        font-size: 1.5rem;
+        transform: rotate(-90deg); /* Rotate the content */
+        transform-origin: left top; /* Set the rotation origin */
+        width: 100vh; /* Use the height as the width */
+        height: 100vw; /* Use the width as the height */
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+        position: absolute;
+        top: 100%;
+        left: 0;
     }
 }
-
-
-
-
-
-
 
 /* Styles for landscape orientation only */
 @media screen and (max-width: 768px) and (orientation: landscape) {
