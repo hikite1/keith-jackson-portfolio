@@ -12,86 +12,94 @@
   </head>
 
   <body>
-    <div class="jumbotron">
-      <img src="images\Dragon Banner.jpg" alt="Dragon Banner">
-      <div class="text-wrapper">
-        <!--tags used to affect individual items in a string and add linked effects(fonts, effects, ...)-->
-        <h1 class="font-effect-fire-animation"><em><span style='color: white; font-size: 5rem;'>Ke</span></span><span style='color: #FFD774; font-size: 5rem;'>i</span><span style='color: #FFD774; font-size: 5rem;'>t</span><span style='color: #FBC00E; font-size: 5rem;'>h </span><span style='color: #FBC00E; font-size: 5rem;'>J</span><span style='color: #E9A33A; font-size: 10rem;'>a</span><span style='color: #E9A33A; font-size: 15rem;'>c</span><span style='color: #E15B18; font-size: 10rem;'>k</span><span style='color:  #E15B18; font-size: 18rem;'>s</span><span style='color: rgb(223, 47, 16); font-size: 22rem;'>o</span><span style='color: rgb(223, 47, 16); font-size: 37rem;'>n</span></em></h1>
-      </div>
+    <!-- Portrait mode message -->
+    <div id="portrait-message" style="display: none; justify-content: center; align-items: center; height: 100vh; background-color: black; color: white; font-family: Arial, sans-serif; text-align: center; position: fixed; width: 100%; z-index: 9999;">
+        <p style="font-size: 1.5rem;">Please rotate your device to landscape mode.</p>
     </div>
-    <div class="audio-player">
-      <audio src="mp3/Matisyahu - One Day (YouTube Version)_256k.mp3" title="One Day by Matisyahu" controls
-        style loop> Your browser does not support HTML5 video. Here is <a
-          href="mp3/Matisyahu - One Day (YouTube Version)_256k.mp3">a link to the audio</a> instead.
-      </audio>
-    </div>
-    <div class="profile">
-      <img id="moving-image" src="images/profile1.jpg" alt="KJ Profile Photo" />
-    </div>
-    <div class="chainborder">
-      <img src="images/chainFrame.png" alt="Chain Frame" />
-    </div>
-    <div class="text-wrapper1">
-      <h2>About Me...</h2>
-    </div>
-    <div class="text-wrapper2-linkedin">
-      <img src="images/in_thumbnail.png" alt="LinkedIn Thumbnail">
-      <h3><strong>My <a href="https://www.linkedin.com/in/keithjackson1976/" id="linkedin-link" onmouseover="linkedInShowPreview()" onmouseout="linkedInHidePreview()"><span style='color: blue;'>LinkedIn</span></a></strong></h3>
-  
-      <!-- Window preview content within the same div -->
-      <div id="linkedin-preview" class="linkedin-preview">
-          <!-- Thumbnail image preview -->
-          <img id="linkedin-thumbnail" src="images/linkedin-thumbnail.png" alt="LinkedIn Preview">
-      </div>
-    </div>
-    <div class="text-wrapper2-github">
-      <img src="images\github_thumbnail.png" alt="GitHub Thumbnail">
-      <h3><strong>My <a href="https://github.com/hikite1" id="github-link"
-        onmouseover="gitHubShowPreview()" onmouseout="gitHubHidePreview()"><span style='color: black;'>Git</span><span style='color: white;'>Hub</span></a></strong></h3>
 
-      <!-- Window preview content within the same div -->
-      <div id="github-preview" class="github-preview">
-        <!-- Thumbnail image preview -->
-        <img id="github-thumbnail" src="images/github-thumbnail.png" alt="GitHub Preview">
+    <!-- Original content -->
+    <div id="original-content">
+      <div class="jumbotron">
+        <img src="images\Dragon Banner.jpg" alt="Dragon Banner">
+        <div class="text-wrapper">
+          <!--tags used to affect individual items in a string and add linked effects(fonts, effects, ...)-->
+          <h1 class="font-effect-fire-animation"><em><span style='color: white; font-size: 5rem;'>Ke</span></span><span style='color: #FFD774; font-size: 5rem;'>i</span><span style='color: #FFD774; font-size: 5rem;'>t</span><span style='color: #FBC00E; font-size: 5rem;'>h </span><span style='color: #FBC00E; font-size: 5rem;'>J</span><span style='color: #E9A33A; font-size: 10rem;'>a</span><span style='color: #E9A33A; font-size: 15rem;'>c</span><span style='color: #E15B18; font-size: 10rem;'>k</span><span style='color:  #E15B18; font-size: 18rem;'>s</span><span style='color: rgb(223, 47, 16); font-size: 22rem;'>o</span><span style='color: rgb(223, 47, 16); font-size: 37rem;'>n</span></em></h1>
+        </div>
       </div>
-    </div>
-    <div class="text-wrapper2-hackerrank">
-      <img src="images\hacker_thumbnail.jpg" alt="HackerRank Thumbnail">
-      <h3><strong>My <a href="https://www.hackerrank.com/hikite1" id="hackerrank-link"
-        onmouseover="hackerrankShowPreview()" onmouseout="hackerrankHidePreview()"><span style='color: #066b24;'>HackerRank</span></a></strong></h3>
+      <div class="audio-player">
+        <audio src="mp3/Matisyahu - One Day (YouTube Version)_256k.mp3" title="One Day by Matisyahu" controls
+          style loop> Your browser does not support HTML5 video. Here is <a
+            href="mp3/Matisyahu - One Day (YouTube Version)_256k.mp3">a link to the audio</a> instead.
+        </audio>
+      </div>
+      <div class="profile">
+        <img id="moving-image" src="images/profile1.jpg" alt="KJ Profile Photo" />
+      </div>
+      <div class="chainborder">
+        <img src="images/chainFrame.png" alt="Chain Frame" />
+      </div>
+      <div class="text-wrapper1">
+        <h2>About Me...</h2>
+      </div>
+      <div class="text-wrapper2-linkedin">
+        <img src="images/in_thumbnail.png" alt="LinkedIn Thumbnail">
+        <h3><strong>My <a href="https://www.linkedin.com/in/keithjackson1976/" id="linkedin-link" onmouseover="linkedInShowPreview()" onmouseout="linkedInHidePreview()"><span style='color: blue;'>LinkedIn</span></a></strong></h3>
+    
+        <!-- Window preview content within the same div -->
+        <div id="linkedin-preview" class="linkedin-preview">
+            <!-- Thumbnail image preview -->
+            <img id="linkedin-thumbnail" src="images/linkedin-thumbnail.png" alt="LinkedIn Preview">
+        </div>
+      </div>
+      <div class="text-wrapper2-github">
+        <img src="images\github_thumbnail.png" alt="GitHub Thumbnail">
+        <h3><strong>My <a href="https://github.com/hikite1" id="github-link"
+          onmouseover="gitHubShowPreview()" onmouseout="gitHubHidePreview()"><span style='color: black;'>Git</span><span style='color: white;'>Hub</span></a></strong></h3>
 
         <!-- Window preview content within the same div -->
-      <div id="hackerrank-preview" class="hackerrank-preview">
-        <!-- Thumbnail image preview -->
-        <img id="hackerrank-thumbnail" src="images/hackerrank-thumbnail.png" alt="HackerRank Preview">
-      </div>
-    </div>
-    <div class="chainborder2">
-      <img src="images/chainFrame.png" alt="Chain Frame" />
-    </div>
-    <div class="text-wrapper3">
-      <h2>My Projects...</h2>
-    </div>    
-    <div class="navbar">
-      <div class="dropdown">     
-        <button2 class="dropbtn"><h3><span style='color: black; font-size: 4rem'>🄶🄰🄼🄴🅂</span><strong><span style='color: #A2DCE7;'> My </span><span style='color: #b83789;'>Games<span></strong></h3></button2>
-        <div class="dropdown-content">
-          <a href="https://acereraknroll.netlify.app/signin">AcererakNRoll</a>
+        <div id="github-preview" class="github-preview">
+          <!-- Thumbnail image preview -->
+          <img id="github-thumbnail" src="images/github-thumbnail.png" alt="GitHub Preview">
         </div>
       </div>
-    </div>    
-    <div class="navbar2">      
-      <div class="dropdown2">             
-        <button class="dropbtn2"><img src="images\replit_thumbnail.png" alt="Replit Thumbnail"><span style='color: #A2DCE7;'>My </span><span style='color: rgb(222, 116, 60); text-decoration: underline;'>Replit</span></button>
-        <div class="dropdown2-content2">
-          <a href="https://replit.com/@hikite1/Adventure-Story">Adventure Story</a>
-          <a href="https://replit.com/@hikite1/Turtle-Art">Turtle Art</a>
-          <!-- Add more projects as needed -->
+      <div class="text-wrapper2-hackerrank">
+        <img src="images\hacker_thumbnail.jpg" alt="HackerRank Thumbnail">
+        <h3><strong>My <a href="https://www.hackerrank.com/hikite1" id="hackerrank-link"
+          onmouseover="hackerrankShowPreview()" onmouseout="hackerrankHidePreview()"><span style='color: #066b24;'>HackerRank</span></a></strong></h3>
+
+          <!-- Window preview content within the same div -->
+        <div id="hackerrank-preview" class="hackerrank-preview">
+          <!-- Thumbnail image preview -->
+          <img id="hackerrank-thumbnail" src="images/hackerrank-thumbnail.png" alt="HackerRank Preview">
         </div>
       </div>
-    </div>
-    <div class="youtube-container">
-      <iframe id="youtube-frame" width="1000" height="550" src="https://www.youtube.com/embed/348yyj_iG4s?playlist=bdgXuVDv9DM,348yyj_iG4s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <div class="chainborder2">
+        <img src="images/chainFrame.png" alt="Chain Frame" />
+      </div>
+      <div class="text-wrapper3">
+        <h2>My Projects...</h2>
+      </div>    
+      <div class="navbar">
+        <div class="dropdown">     
+          <button2 class="dropbtn"><h3><span style='color: black; font-size: 4rem'>🄶🄰🄼🄴🅂</span><strong><span style='color: #A2DCE7;'> My </span><span style='color: #b83789;'>Games<span></strong></h3></button2>
+          <div class="dropdown-content">
+            <a href="https://acereraknroll.netlify.app/signin">AcererakNRoll</a>
+          </div>
+        </div>
+      </div>    
+      <div class="navbar2">      
+        <div class="dropdown2">             
+          <button class="dropbtn2"><img src="images\replit_thumbnail.png" alt="Replit Thumbnail"><span style='color: #A2DCE7;'>My </span><span style='color: rgb(222, 116, 60); text-decoration: underline;'>Replit</span></button>
+          <div class="dropdown2-content2">
+            <a href="https://replit.com/@hikite1/Adventure-Story">Adventure Story</a>
+            <a href="https://replit.com/@hikite1/Turtle-Art">Turtle Art</a>
+            <!-- Add more projects as needed -->
+          </div>
+        </div>
+      </div>
+      <div class="youtube-container">
+        <iframe id="youtube-frame" width="1000" height="550" src="https://www.youtube.com/embed/348yyj_iG4s?playlist=bdgXuVDv9DM,348yyj_iG4s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
     </div>
     
     <!--link to script functions are best placed before the closing body tag-->
