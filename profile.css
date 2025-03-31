@@ -385,7 +385,29 @@ body {
 
 
 
+/* Hide content in portrait mode */
+@media screen and (orientation: portrait) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: black; /* Optional: Set a background color */
+        color: white; /* Optional: Set text color */
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
 
+    body * {
+        display: none; /* Hide all content */
+    }
+
+    body::before {
+        content: "Please rotate your device to landscape mode.";
+        display: block;
+        font-size: 1.5rem;
+    }
+}
 
 
 
