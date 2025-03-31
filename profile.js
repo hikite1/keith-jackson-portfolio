@@ -102,3 +102,21 @@ function rotateVideos() {
 }
 
 setInterval(rotateVideos, 5000); // Rotate every 5 seconds
+
+function enforceLandscape() {
+  if (window.innerHeight > window.innerWidth) {
+      // If in portrait mode, show a message or blank screen
+      document.body.innerHTML = `
+          <div style="display: flex; justify-content: center; align-items: center; height: 100vh; background-color: black; color: white; font-family: Arial, sans-serif; text-align: center;">
+              <p style="font-size: 1.5rem;">Please rotate your device to landscape mode.</p>
+          </div>
+      `;
+  } else {
+      // Reload the page or restore content when in landscape
+      location.reload();
+  }
+}
+
+// Check orientation on load and resize
+window.addEventListener('load', enforceLandscape);
+window.addEventListener('resize', enforceLandscape);
