@@ -476,7 +476,8 @@ body {
         width: 150%; /* Take up the full width of the parent container */
         max-width: none; /* Remove the maximum width restriction */
         margin: 0 auto; /* Center the jumbotron horizontally */
-        margin-left: 60px;
+        margin-left: 100px;
+        margin-top: 10px;
         text-align: center;
         background-color: rgba(0, 0, 0, 0.5);
         border: 10px solid black;
