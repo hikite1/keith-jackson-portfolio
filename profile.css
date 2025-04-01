@@ -6,11 +6,13 @@ body {
     background-position: center;
     background-size: cover;
     text-align: center;
+    overflow-x: hidden; /* Prevent horizontal scrolling */  
 }
 
 .jumbotron {
-    max-width: 76rem; /* Set maximum width for jumbotron */
-    width: 100%; /* Take full width of the parent container */
+    position: relative; /* Make the jumbotron a positioning context */
+    width: 95%; /* Take full width of the parent container */
+    max-width: 76rem; /* Set a maximum width for larger screens */
     margin: 0 auto; /* Center the jumbotron horizontally */
     height: 30rem;
     text-align: center;
@@ -26,10 +28,57 @@ body {
 }
 
 .text-wrapper {
+    position: relative;
+    top: -18rem; /* Move it higher on the page */
+    left: 48rem; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for centering */
     font-family: 'Rancho', cursive;
-    text-align: center;
-    margin-top: -43rem; /* Adjust the margin-top as needed */
-    margin-left: 20rem;
+    color: white; /* Ensure text is visible */
+}
+
+.letter-white {
+    color: white;
+    font-size: 5rem;
+}
+
+.letter-yellow {
+    color: #FFD774;
+    font-size: 5rem;
+}
+
+.letter-orange {
+    color: #FBC00E;
+    font-size: 5rem;
+}
+
+.letter-light-orange {
+    color: #E9A33A;
+    font-size: 10rem;
+}
+
+.letter-light-orange-large {
+    color: #E9A33A;
+    font-size: 12rem;
+}
+
+.letter-red {
+    color: #E15B18;
+    font-size: 14rem;
+}
+
+.letter-red-large {
+    color: #E15B18;
+    font-size: 20rem;
+}
+
+.letter-dark-red {
+    color: rgb(223, 47, 16);
+    font-size: 24rem;
+}
+
+.letter-dark-red-largest {
+    color: rgb(223, 47, 16);
+    font-size: 32rem;
 }
 
 .audio-player {
@@ -399,15 +448,16 @@ body {
     }
 
     body::before {
-        content: "Please rotate your device to landscape mode.";
+        content: "Please rotate your device to view page.";
         display: block;
-        font-size: 1.5rem;
+        font-size: 2rem;
+        font-weight: bold; 
     }
 }
 
 
 /* Styles for landscape orientation only */
-@media screen and (max-width: 768px) and (orientation: landscape) {
+@media screen and (max-width: 1024px) and (orientation: landscape) { 
 
     body {
         margin: 0;
@@ -419,26 +469,82 @@ body {
         text-align: center;
     }
 
+    body, html {
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+        overflow-x: auto; /* Enable horizontal scrolling */
+    }
+
     .jumbotron {
-        width: 700px; /* Fixed container width */
-        margin: 0 auto;
+        box-sizing: border-box; /* Include padding and border in the width calculation */
+        width: 150%; /* Take up the full width of the parent container */
+        max-width: none; /* Remove the maximum width restriction */
+        margin: 0 auto; /* Center the jumbotron horizontally */
+        margin-left: 60px;
         text-align: center;
         background-color: rgba(0, 0, 0, 0.5);
         border: 10px solid black;
     }
 
     .jumbotron img {
-        width: 90%; /* Relative to the container */
-        height: auto;
+        width: 95%; /* Ensure the image takes up the full width of the jumbotron */
+        height: 85%; 
         border: 1px solid black;
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
-    h1.font-effect-fire-animation {
-        font-size: 16px;
+    .text-wrapper {
+        position: relative;
+        top: -18rem; /* Move it higher on the page */
+        left: 52rem; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Adjust for centering */
         font-family: 'Rancho', cursive;
-        text-align: center;
-        margin-top: -50px;
+        color: white; /* Ensure text is visible */
+    }
+
+    .letter-white {
+        color: white;
+        font-size: 5rem;
+    }
+    
+    .letter-yellow {
+        color: #FFD774;
+        font-size: 5rem;
+    }
+    
+    .letter-orange {
+        color: #FBC00E;
+        font-size: 5rem;
+    }
+    
+    .letter-light-orange {
+        color: #E9A33A;
+        font-size: 10rem;
+    }
+    
+    .letter-light-orange-large {
+        color: #E9A33A;
+        font-size: 12rem;
+    }
+    
+    .letter-red {
+        color: #E15B18;
+        font-size: 14rem;
+    }
+    
+    .letter-red-large {
+        color: #E15B18;
+        font-size: 20rem;
+    }
+    
+    .letter-dark-red {
+        color: rgb(223, 47, 16);
+        font-size: 24rem;
+    }
+    
+    .letter-dark-red-largest {
+        color: rgb(223, 47, 16);
+        font-size: 32rem;
     }
 
     .audio-player {
@@ -455,7 +561,7 @@ body {
 
     .profile #moving-image {
         position: absolute;
-        width: 100%; /* Relative to the container */
+        width: 30%; /* Relative to the container */
         margin-top: 10px;
     }
 
