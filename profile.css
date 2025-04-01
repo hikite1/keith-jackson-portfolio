@@ -476,8 +476,8 @@ body {
         width: 150%; /* Take up the full width of the parent container */
         max-width: none; /* Remove the maximum width restriction */
         margin: 0 auto; /* Center the jumbotron horizontally */
-        margin-left: 100px;
-        margin-top: 10px;
+        margin-left: 200px;
+        margin-top: 40px;
         text-align: center;
         background-color: rgba(0, 0, 0, 0.5);
         border: 10px solid black;
@@ -499,55 +499,10 @@ body {
         color: white; /* Ensure text is visible */
     }
 
-    .letter-white {
-        color: white;
-        font-size: 5rem;
-    }
-    
-    .letter-yellow {
-        color: #FFD774;
-        font-size: 5rem;
-    }
-    
-    .letter-orange {
-        color: #FBC00E;
-        font-size: 5rem;
-    }
-    
-    .letter-light-orange {
-        color: #E9A33A;
-        font-size: 10rem;
-    }
-    
-    .letter-light-orange-large {
-        color: #E9A33A;
-        font-size: 12rem;
-    }
-    
-    .letter-red {
-        color: #E15B18;
-        font-size: 14rem;
-    }
-    
-    .letter-red-large {
-        color: #E15B18;
-        font-size: 20rem;
-    }
-    
-    .letter-dark-red {
-        color: rgb(223, 47, 16);
-        font-size: 24rem;
-    }
-    
-    .letter-dark-red-largest {
-        color: rgb(223, 47, 16);
-        font-size: 32rem;
-    }
-
     .audio-player {
         display: block;
-        margin: 20px auto;
-        width: 80%; /* Relative to the container */
+        margin: 10px auto;
+        width: 100%; /* Relative to the container */
     }
 
     .profile {
