@@ -8,5 +8,5 @@ No tablet or panoramic media queries.
 https://keith-jackson-portfolio.netlify.app/
 # Web-Pages
 
-Last deploy version 1.2
+Last deploy version 1.7
 Deploy Version 1 is adding netlify.toml file and media queries to enforce landscape mode
