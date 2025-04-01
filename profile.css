@@ -501,20 +501,21 @@ body {
 
     .audio-player {
         display: block;
-        margin: 10px auto;
-        width: 100%; /* Relative to the container */
+        margin: 20px 0; /* Remove horizontal centering */
+        width: 300%; /* Make it three times larger */
+        height: auto; /* Maintain the aspect ratio */
     }
 
     .profile {
         position: relative;
         width: 700px; /* Fixed container width */
-        margin: 0 auto;
+        margin: 0 auto; /* Center horizontally */
     }
 
     .profile #moving-image {
         position: absolute;
-        width: 30%; /* Relative to the container */
-        margin-top: 10px;
+        width: 40%; /* Relative to the container */
+        margin-top: 20px;
     }
 
     .chainborder img {
