@@ -508,7 +508,7 @@ body {
     .chainborder img { 
         max-width: 70rem; /* Set maximum width*/
         margin-top: 25rem;
-        margin-left: 6rem;
+        margin-left: 10rem;
         width: 76rem;
         height: 55rem;
         background-color: rgba(0, 0, 0, 0.5); /* Sremi-transparent background */
@@ -518,7 +518,7 @@ body {
     .text-wrapper1 {
         position: absolute;
         top: 72rem; /* Place it at the top of the .chainborder */
-        left: 70%; /* Center horizontally */
+        left: 75%; /* Center horizontally */
         color: #A2DCE7;
         font-size: 2rem;
         transform: translateX(-50%) scale(1.5);
@@ -528,10 +528,10 @@ body {
 
     .text-wrapper2-linkedin img {
         position: absolute;
-        margin-top: 1.5rem; /* Move it further down */
+        margin-top: -1rem; /* Move it further down */
         left: -5rem; /* Move it further to the right */
         width: 10rem; /* Keep the image size */
-        transform: translateX(-50%); /* Center horizontally */
+        transform: translateX(-50%) scale(.75); /* Center horizontally */
         color: #A2DCE7;
         font-size: 3rem;
         font-family: 'Sedgwick Ave Display', cursive;
@@ -542,10 +542,10 @@ body {
     .text-wrapper2-linkedin {
         position: absolute;
         top: 80rem; /* Move the container further down */
-        left: 72%; /* Move the container further to the right */
-        transform: translateX(-50%); /* Center horizontally */
+        left: 75%; /* Move the container further to the right */
+        transform: translateX(-50%) scale(1.5); /* Center horizontally */
         color: #A2DCE7;
-        font-size: 3rem;
+        font-size: 2rem;
         font-family: 'Sedgwick Ave Display', cursive;
         z-index: 2; /* Set a higher z-index value than .chainborder */
     }
@@ -565,7 +565,7 @@ body {
     .text-wrapper2-github {
         position: absolute;
         top: 88rem; /* Place it at the top of the .chainborder */
-        left: 72%; /* Center horizontally */
+        left: 75%; /* Center horizontally */
         transform: translateX(-50%); /* Center horizontally */
         color: #A2DCE7;
         font-size: 3rem;
@@ -588,7 +588,7 @@ body {
     .text-wrapper2-hackerrank {
         position: absolute;
         top: 98rem; /* Adjust vertical position */
-        left: 72%; /* Adjust horizontal position */
+        left: 74%; /* Adjust horizontal position */
         transform: translateX(-50%) scale(1.5); /* Center horizontally and scale up */
         color: #A2DCE7;
         font-size: 2rem; /* Lower the base font size */
@@ -598,7 +598,7 @@ body {
     .chainborder2 img { 
         max-width: 70rem; /* Set maximum width*/
         margin-top: 10rem;
-        margin-left: 6rem;
+        margin-left: 10rem;
         width: 76rem;
         height: 55rem;
         background-color: rgba(0, 0, 0, 0.5); /* Sremi-transparent background */
@@ -639,6 +639,6 @@ body {
 
     .youtube-container {
         margin-top: 25rem;
-        margin-left: 11rem;
+        margin-left: 15rem;
     }
 }
