@@ -475,7 +475,7 @@ body {
         width: 95%; /* Take full width of the parent container */
         max-width: 76rem; /* Set a maximum width for larger screens */
         margin: 0 auto; /* Center the jumbotron horizontally */
-        margin-left: 5rem;
+        margin-left: 7rem;
         height: 30rem;
         width: 76rem;
         text-align: center;
@@ -552,10 +552,10 @@ body {
     
     .text-wrapper2-github img {
         position: absolute;
-        margin-top: 3rem; /* Place it at the top of the .chainborder */
-        left: -8rem; /* move horizontally */
+        margin-top: .8rem; /* Place it at the top of the .chainborder */
+        left: -6rem; /* move horizontally */
         width: 22rem;
-        transform: translateX(-50%); /* Center horizontally */
+        transform: translateX(-50%) scale(.75); /* Center horizontally */
         color: #A2DCE7;
         font-size: 3rem;
         font-family: 'Sedgwick Ave Display', cursive;
@@ -564,11 +564,11 @@ body {
     
     .text-wrapper2-github {
         position: absolute;
-        top: 88rem; /* Place it at the top of the .chainborder */
+        top: 89rem; /* Place it at the top of the .chainborder */
         left: 75%; /* Center horizontally */
-        transform: translateX(-50%); /* Center horizontally */
+        transform: translateX(-50%) scale(1.5); /* Center horizontally */
         color: #A2DCE7;
-        font-size: 3rem;
+        font-size: 2rem;
         font-family: 'Sedgwick Ave Display', cursive;
         z-index: 3; /* Set a higher z-index value than .chainborder */
     }
@@ -609,9 +609,9 @@ body {
         position: absolute;
         top: 140rem; /* Place it at the top of the .chainborder */
         left: 71%; /* Center horizontally */
-        transform: translateX(-50%); /* Center horizontally */
+        transform: translateX(-50%) scale(2.5); /* Center horizontally */
         color: #A2DCE7;
-        font-size: 2rem;
+        font-size: 1.5rem;
         transform: translateX(-50%) scale(1.25);
         font-family: 'Sedgwick Ave Display', cursive;
         
