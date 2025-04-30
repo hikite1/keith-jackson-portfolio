@@ -53,36 +53,7 @@ window.onload = () => {
   startMovingImg();
 };
 
-// JavaScript to handle hover and show window preview
-function linkedInShowPreview() {
-  var linkedinPreview = document.getElementById("linkedin-preview");
-  linkedinPreview.style.display = "block";
-}
 
-function linkedInHidePreview() {
-  var linkedinPreview = document.getElementById("linkedin-preview");
-  linkedinPreview.style.display = "none";
-}
-
-function gitHubShowPreview() {
-  var githubPreview = document.getElementById("github-preview");
-  githubPreview.style.display = "block";
-}
-
-function gitHubHidePreview() {
-  var githubPreview = document.getElementById("github-preview");
-  githubPreview.style.display = "none";
-}
-
-function hackerrankShowPreview() {
-  var hackerrankPreview = document.getElementById("hackerrank-preview");
-  hackerrankPreview.style.display = "block";
-}
-
-function hackerrankHidePreview() {
-  var hackerrankPreview = document.getElementById("hackerrank-preview");
-  hackerrankPreview.style.display = "none";
-}
 
 var videoIndex = 0;
 var videoList = [
@@ -95,10 +66,48 @@ var videoList = [
     // Add more video IDs as needed
 ];
 
-function rotateVideos() {
-    var frame = document.getElementById('youtube-frame');
-    videoIndex = (videoIndex + 1) % videoList.length;
-    frame.src = "https://www.youtube.com/embed/" + videoList[videoIndex] + "?mute=1";
+var player; // YouTube Iframe API player object
+var timeoutId; // ID of the timeout
+var pausedTime; // Time when the video was paused
+
+function onYouTubeIframeAPIReady() {
+  console.log("onYouTubeIframeAPIReady called");
+    player = new YT.Player('youtube-frame', {
+        events: {
+            'onStateChange': onPlayerStateChange
+        }
+    });
 }
 
-setInterval(rotateVideos, 5000); // Rotate every 5 seconds
+function onPlayerStateChange(event) {
+    if (event.data === YT.PlayerState.ENDED) {
+        rotateVideos();
+    } else if (event.data === YT.PlayerState.PAUSED) {
+        pausedTime = new Date().getTime();
+        timeoutId = setTimeout(checkPauseTime, 10000); // Check pause time after 10 seconds
+    } else if (event.data === YT.PlayerState.PLAYING) {
+        clearTimeout(timeoutId); // Clear the timeout
+    }
+}
+
+function checkPauseTime() {
+    var currentTime = new Date().getTime();
+    if (currentTime - pausedTime >= 10000) {
+        rotateVideos();
+    }
+}
+
+function rotateVideos() {
+    videoIndex = (videoIndex + 1) % videoList.length;
+    player.loadVideoById(videoList[videoIndex]);
+}
+
+// Load the first video
+player.loadVideoById(videoList[0]);
+
+// Add an event listener to the document to detect clicks outside the container
+document.addEventListener('click', function(event) {
+    if (!document.getElementById('youtube-container').contains(event.target)) {
+        rotateVideos();
+    }
+});
