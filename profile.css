@@ -441,7 +441,7 @@ body {
 
 
 /* Styles for landscape orientation only */
-@media screen and (orientation: landscape) { 
+@media screen and (max-width: 1024px) and (orientation: landscape) { 
 
     body {
         margin: 0; /* Remove default margin */
@@ -449,11 +449,11 @@ body {
         width: 100vw; /* Set the body width to 100% of the viewport */
         height: 100vh; /* Set the body height to 100% of the viewport */
     }
-    
+
     .jumbotron {
         position: relative; /* Make the jumbotron a positioning context */
         width: 100%; /* Take full width of the parent container */
-        margin: 0; /* Center the jumbotron horizontally */
+        margin: 0 auto; /* Center the jumbotron horizontally */
         height: 75vh;
         text-align: center;
         background-color: rgba(0, 0, 0, 0.5);
