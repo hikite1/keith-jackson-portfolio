@@ -445,8 +445,8 @@ body {
 
     .jumbotron {
         position: relative; /* Make the jumbotron a positioning context */
-        width: 100vw; /* Take full width of the parent container */
-        margin: 0 auto; /* Center the jumbotron horizontally */
+        width: 100%; /* Take full width of the parent container */
+        margin: 0; /* Center the jumbotron horizontally */
         height: 75vh;
         text-align: center;
         background-color: rgba(0, 0, 0, 0.5);
