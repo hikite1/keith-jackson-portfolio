@@ -25,6 +25,7 @@ body {
     .jumbotron {
         position: relative;
         width: 100%; /* Changed to percentage for responsiveness */
+        max-width: 1080px;
         margin: 0 auto;
         height: 75vh; /* Changed to viewport height for responsiveness */
         text-align: center;
