@@ -452,12 +452,15 @@ body {
         background-color: rgba(0, 0, 0, 0.5);
         border: 1rem solid black;
         margin-top: 2rem;
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
     }
     
     .jumbotron img {
         width: 98%;
-        height: 75vh;
+        height: 71vh;
         border: 0.05rem solid black;
         margin-top: 1.4rem;
     }
