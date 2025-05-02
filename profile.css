@@ -23,9 +23,14 @@ body {
 
 @media screen and (max-width: 1080px) and (orientation: landscape) {
     .jumbotron {
-        width: 95%; /* Adjust width */
-        height: 60vh; /* Adjust height */
-        margin-top: 1rem; /* Adjust margin */
+        position: relative;
+        width: 100%; /* Changed to percentage for responsiveness */
+        margin: 0 auto;
+        height: 75vh; /* Changed to viewport height for responsiveness */
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        border: 1rem solid black;
+        margin-top: 2rem; /* Increased margin-top for better spacing */
     }
 }
 
