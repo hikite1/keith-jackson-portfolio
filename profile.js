@@ -21,7 +21,7 @@ function moveImg() {
 }
 
 function updateContainerWidth() {
-  containerWidth = window.innerWidth * 0.95; // Set container width to 80% of the window width
+  containerWidth = window.innerWidth * 0.99; // Set container width to 80% of the window width
   maxPosition = containerWidth + containerOffset - theImg.clientWidth;
 }
 
