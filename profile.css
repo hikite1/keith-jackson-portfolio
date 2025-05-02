@@ -441,21 +441,18 @@ body {
 
 
 /* Styles for landscape orientation only */
-@media screen and (max-width: 1024px) and (orientation: landscape) { 
+@media screen and (orientation: landscape) { 
 
     .jumbotron {
         position: relative; /* Make the jumbotron a positioning context */
-        width: 99%; /* Take full width of the parent container */
+        width: 100vw; /* Take full width of the parent container */
         margin: 0 auto; /* Center the jumbotron horizontally */
         height: 75vh;
         text-align: center;
         background-color: rgba(0, 0, 0, 0.5);
         border: 1rem solid black;
         margin-top: 2rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
+        display: block;
     }
     
     .jumbotron img {
