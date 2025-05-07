@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,25 +9,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
   </head>
-
   <body>
+    <div class="background-video">
+      <video autoplay muted loop id="background-video">
+        <source src="images/mobile_fireBG.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
     <div class="jumbotron">
       <img src="images\Dragon Banner.jpg" alt="Dragon Banner">
       <div class="text-wrapper">
           <h1 class="font-effect-fire-animation">
-              <em>
-                  <span class="letter-white">Ke</span>
-                  <span class="letter-yellow">i</span>
-                  <span class="letter-yellow">t</span>
-                  <span class="letter-orange">h </span>
-                  <span class="letter-orange">J</span>
-                  <span class="letter-light-orange">a</span>
-                  <span class="letter-light-orange-large">c</span>
-                  <span class="letter-red">k</span>
-                  <span class="letter-red-large">s</span>
-                  <span class="letter-dark-red">o</span>
-                  <span class="letter-dark-red-largest">n</span>
-              </em>
+            <em>
+              <span class="letter-white">Ke</span><span class="letter-yellow">i</span><span class="letter-yellow">t</span><span class="letter-orange">h</span> <span class="letter-orange">J</span><span class="letter-light-orange">a</span><span class="letter-light-orange-large">c</span><span class="letter-red">k</span><span class="letter-red-large">s</span><span class="letter-dark-red">o</span><span class="letter-dark-red-largest">n</span>
+            </em>
           </h1>
       </div>
     </div>
@@ -43,15 +37,14 @@
     </div>
     <div class="chainborder">
       <img src="images/chainFrame.png" alt="Chain Frame" />
-    </div>
-    <div class="text-wrapper1">
-      <h2>About Me...</h2>
+      <div class="text-wrapper1">
+        <h2>About Me...</h2>
+      </div>
     </div>
     <div class="parent-container" style="position: relative;">
       <div class="text-wrapper2-linkedin">
         <img src="images/in_thumbnail.png" alt="LinkedIn Thumbnail">
         <h3><strong>My <a href="https://www.linkedin.com/in/keithjackson1976/" id="linkedin-link" onmouseover="linkedInShowPreview()" onmouseout="linkedInHidePreview()"><span style='color: blue;'>LinkedIn</span></a></strong></h3>    
-        <!-- Window preview content within the same div -->
         <div id="linkedin-preview" class="linkedin-preview">
         </div>
       </div>
@@ -59,26 +52,32 @@
     <div class="text-wrapper2-github">
       <img src="images/github_thumbnail.png" alt="GitHub Thumbnail">
       <h3><strong>My <a href="https://github.com/hikite1" id="github-link"><span style='color: black;'>Git</span><span style='color: white;'>Hub</span></a></strong></h3>    
-      <!-- Window preview content within the same div -->
       <div id="github-preview" class="github-preview">
       </div>
     </div>
     <div class="text-wrapper2-hackerrank">
       <img src="images/hacker_thumbnail.jpg" alt="HackerRank Thumbnail">
       <h3><strong>My <a href="https://www.hackerrank.com/hikite1" id="hackerrank-link"><span style='color: #066b24;'>HackerRank</span></a></strong></h3>    
-      <!-- Window preview content within the same div -->
       <div id="hackerrank-preview" class="hackerrank-preview">
       </div>
     </div>
     <div class="chainborder2">
       <img src="images/chainFrame.png" alt="Chain Frame" />
+      <div class="text-wrapper3">
+        <h2>My Projects...</h2>
+      </div> 
     </div>
-    <div class="text-wrapper3">
-      <h2>My Projects...</h2>
-    </div>    
     <div class="navbar">
-      <div class="dropdown">     
-        <button2 class="dropbtn"><h3><span style='color: black; font-size: 4rem'>🄶🄰🄼🄴🅂</span><strong><span style='color: #A2DCE7;'> My </span><span style='color: #b83789;'>Games<span></strong></h3></button2>
+      <div class="dropdown">
+        <button class="dropbtn">
+          <h3>
+            <span style="color: black; font-size: 2rem;">🄶🄰🄼🄴🅂</span>
+            <strong>
+              <span style="color: #A2DCE7;"> My </span>
+              <span style="color: #b83789;">Games</span>
+            </strong>
+          </h3>
+        </button>
         <div class="dropdown-content">
           <a href="https://acereraknroll.netlify.app/signin">AcererakNRoll</a>
         </div>
@@ -86,7 +85,7 @@
     </div>    
     <div class="navbar2">      
       <div class="dropdown2">             
-        <button class="dropbtn2"><img src="images\replit_thumbnail.png" alt="Replit Thumbnail"><span style='color: #A2DCE7;'>My </span><span style='color: rgb(222, 116, 60); text-decoration: underline;'>Replit</span></button>
+        <button class="dropbtn2"><img src="images/replit_thumbnail.png" alt="Replit Thumbnail"><span style='color: #A2DCE7;'>My </span><span style='color: rgb(222, 116, 60); text-decoration: underline;'>Replit</span></button>
         <div class="dropdown2-content2">
           <a href="https://replit.com/@hikite1/Adventure-Story">Adventure Story</a>
           <a href="https://replit.com/@hikite1/Turtle-Art">Turtle Art</a>
