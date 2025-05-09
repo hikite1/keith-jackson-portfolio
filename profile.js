@@ -54,3 +54,16 @@ document.addEventListener('click', function(event) {
         rotateVideos();
     }
 });
+
+function changeSong() {
+    // Get the selected song from the dropdown
+    var songSelector = document.getElementById("song-selector");
+    var selectedSong = songSelector.value;
+  
+    // Get the audio player and update its source
+    var audioPlayer = document.getElementById("audio-player");
+    audioPlayer.src = selectedSong;
+  
+    // Play the new song automatically (optional)
+    audioPlayer.play();
+  }

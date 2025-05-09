@@ -129,28 +129,7 @@ img {
   font-size: clamp(3.5rem, 20vw, 4rem);
 }
 
-.audio-player audio {
-  width: 100%;
-  height: 40px;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-.audio-player audio::-webkit-media-controls {
-  background-color: #f0f0f0;
-}
-
-.audio-player audio::-moz-media-controls {
-  background-color: #f0f0f0;
-}
-
 .profile {
-  margin-top: 2rem;
   text-align: center;
   overflow: hidden; /* prevents image from spilling out visually */
   padding: 0 7vw; /* add side padding to create space on both sides */
@@ -174,6 +153,61 @@ img {
   100% {
     transform: translateX(0);
   }
+}
+
+.audio-player audio {
+  width: 100%;
+  height: 40px;
+  color: #00ffff;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  background-color: black;
+  border: 1px solid #00ffff;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Make label blue and move it lower */
+.audio-player label {
+  display: block;
+  color: #00ffff;
+  font-size: 1.2rem;
+  margin: 1rem 0 0.5rem; /* Added top margin */
+}
+
+#song-selector {
+  width: 100%;
+  max-width: 100%;
+  font-size: 1.2rem;
+  color: #00ffff;
+  background-color: black;
+  border: 1px solid #A2DCE7;
+  padding: 0.5rem;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 5px;
+  outline: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Ensure focus doesn't change border color */
+#song-selector:focus {
+  border-color: #A2DCE7;
+  box-shadow: 0 0 0 2px rgba(162, 220, 231, 0.5); /* optional glow effect */
+}
+
+/* Media control styling (optional browser support) */
+.audio-player audio::-webkit-media-controls {
+  background-color: black;
+}
+.audio-player audio::-moz-media-controls {
+  background-color: black;
+}
+.audio-player audio::-ms-media-controls {
+  background-color: black;
 }
 
 .chainborder {
@@ -237,7 +271,7 @@ img {
 }
 
 .chainborder2 {
-  position: relative; /* This makes it the reference for absolute positioning */
+  position: relative; 
   max-width: 90vw;
   margin: 2rem auto;
 }
@@ -264,29 +298,16 @@ img {
 
 .navbar,
 .navbar2 {
-  width: 98%;
-  padding: 1rem;
+  font-size: clamp(1.35rem, 4.5vw, 1.8rem);
+  text-decoration: none;
+  color: #00ffff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin: 0.5rem auto;
   text-align: center;
-  font-size: clamp(1rem, 4vw, 1.5rem);
-  z-index: 999;
+  transition: background-color 0.3s, color 0.3s;
+  max-width: 90%;
 }
-
-.navbar:hover,
-.navbar2:hover {
-  background-color: #00ffff;
-  color: black;
-}
-
-
-
-
-
-
-
-
-
-
-
 
 .dropbtn,
 .dropbtn2 {
@@ -303,6 +324,17 @@ img {
   border: 1px solid #00ffff;
 }
 
+.navbar:hover,
+.navbar2:hover {
+  background-color: #00ffff;
+  color: black;
+}
+
+.dropbtn h3 .logo-text {
+  font-size: 4rem;
+  color: black;
+}
+
 .dropbtn h3,
 .dropbtn2 span {
   margin: 0;
@@ -312,8 +344,18 @@ img {
   font-weight: bold;
 }
 
+.hover-black {
+  color: #A2DCE7;
+  transition: color 0.3s ease;
+}
+
+.navbar:hover .hover-black, .navbar2:hover .hover-black {
+  color: black;
+}
+
 .dropbtn2 img {
-  width: 40px;
+  margin: 0 auto;
+  width: 25vw;
   flex-shrink: 0;
 }
 
@@ -325,10 +367,20 @@ img {
   font-size: clamp(2rem, 8vw, 3rem);
 }
 
-.dropdown-content,
+.dropdown-content {
+  display: none;
+  position: relative;
+  background-color: #111;
+  min-width: 150px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  top: 100%;
+  left: 0;
+}
+
 .dropdown2-content2 {
   display: none;
-  position: absolute;
+  position: relative;
   background-color: #111;
   min-width: 150px;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
@@ -343,7 +395,7 @@ img {
   padding: 0.75rem 1rem;
   text-decoration: none;
   display: block;
-  font-size: clamp(0.9rem, 3vw, 1.1rem);
+  font-size: clamp(2rem, 8vw, 3rem);
   transition: background 0.3s;
 }
 
@@ -357,15 +409,39 @@ img {
   display: block;
 }
 
+.chainborder3 {
+  position: relative; /* This makes it the reference for absolute positioning */
+  max-width: 90vw;
+  margin: 2rem auto;
+}
 
+.chainborder3 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
+.text-wrapper4 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(1.5rem, 7.5vw, 2.25rem);
+  font-weight: 300;
+  color: #A2DCE7;
+  font-family: 'Sedgwick Ave Display', cursive;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 1;
+}
 
-
-
-
-
-
-
+.google-drive a {
+  text-align: center;
+  display: block;
+  color: #00ffff;
+  font-size: 2rem;
+  margin: 1rem 0 0.5rem; /* Added top margin */
+}
 
 iframe {
   max-width: 98%;
