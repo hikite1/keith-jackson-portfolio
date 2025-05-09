@@ -1,140 +1,147 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keith Jackson's Profile Page</title>
-    <link rel="stylesheet" type="text/css" href="profile.css" media="all" />
-    <link href="https://fonts.googleapis.com/css?family=Rancho&effect=fire-animation" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
-  </head>
-  <body>
-    <div class="background-video">
-      <video autoplay muted loop id="background-video">
-        <source src="images/mobile_fireBG.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    <div class="jumbotron">
-      <img src="images\Dragon Banner.jpg" alt="Dragon Banner">
-      <div class="text-wrapper">
-          <h1 class="font-effect-fire-animation">
-            <em>
-              <span class="letter-white">Ke</span><span class="letter-yellow">i</span><span class="letter-yellow">t</span><span class="letter-orange">h</span> <span class="letter-orange">J</span><span class="letter-light-orange">a</span><span class="letter-light-orange-large">c</span><span class="letter-red">k</span><span class="letter-red-large">s</span><span class="letter-dark-red">o</span><span class="letter-dark-red-largest">n</span>
-            </em>
-          </h1>
-      </div>
-    </div>
-    <div class="profile">
-      <img id="moving-image" src="images/profile1.jpg" alt="KJ Profile Photo" />
-    </div>
-    <div class="audio-player">
-      <label for="song-selector">Choose a song:</label>
-      <select id="song-selector" onchange="changeSong()">
-        <option value="mp3/Matisyahu - One Day (YouTube Version)_256k.mp3" selected>
-          One Day by Matisyahu
-        </option>
-        <option value="mp3/We_Care_Alot.mp3">
-          We Care a Lot Cover (Anthrax, Korn, Filter, etc.)
-        </option>
-        <option value="mp3\Brass_Against_Mother_Danzig_cover_ft_Liza_Colby.mp3">
-          Brass Against - Mother Cover (Liza Colby)
-        </option>
-      </select>
-      <audio id="audio-player" controls loop style="width: 100%; margin-top: 1rem;">
-        <source src="mp3/Matisyahu - One Day (YouTube Version)_256k.mp3" type="audio/mpeg">
-        Your browser does not support HTML5 audio. 
-      </audio>
-    </div>
-    <div class="chainborder">
-      <img src="images/chainFrame.png" alt="Chain Frame" />
-      <div class="text-wrapper1">
-        <h2>About Me...</h2>
-      </div>
-    </div>
-    <div class="parent-container" style="position: relative;">
-      <div class="text-wrapper2-linkedin">
-        <img src="images/in_thumbnail.png" alt="LinkedIn Thumbnail">
-        <h3><strong>My <a href="https://www.linkedin.com/in/keithjackson1976/" id="linkedin-link" onmouseover="linkedInShowPreview()" onmouseout="linkedInHidePreview()"><span style='color: blue;'>LinkedIn</span></a></strong></h3>    
-        <div id="linkedin-preview" class="linkedin-preview">
-        </div>
-      </div>
-    </div>
-    <div class="text-wrapper2-github">
-      <img src="images/github_thumbnail.png" alt="GitHub Thumbnail">
-      <h3><strong>My <a href="https://github.com/hikite1" id="github-link"><span style='color: black;'>Git</span><span style='color: white;'>Hub</span></a></strong></h3>    
-      <div id="github-preview" class="github-preview">
-      </div>
-    </div>
-    <div class="text-wrapper2-hackerrank">
-      <img src="images/hacker_thumbnail.jpg" alt="HackerRank Thumbnail">
-      <h3><strong>My <a href="https://www.hackerrank.com/hikite1" id="hackerrank-link"><span style='color: #066b24;'>HackerRank</span></a></strong></h3>    
-      <div id="hackerrank-preview" class="hackerrank-preview">
-      </div>
-    </div>
-    <div class="chainborder2">
-      <img src="images/chainFrame.png" alt="Chain Frame" />
-      <div class="text-wrapper3">
-        <h2>My Projects...</h2>
-      </div> 
-    </div>
-    <div class="navbar">
-      <div class="dropdown">
-        <button class="dropbtn">
-          <h3>
-            <span class="logo-text">🄶🄰🄼🄴🅂</span>
-            <br>
-            <strong>
-              <span class="hover-black">My</span>
-              <span style="color: #b83789;">Games</span>
-            </strong>
-          </h3>
-        </button>
-        <div class="dropdown-content">
-          <a href="https://acereraknroll.netlify.app/signin">AcererakNRoll</a>
-        </div>
-      </div>
-    </div>    
-    <div class="navbar2">      
-      <div class="dropdown2">             
-        <button class="dropbtn2">
-          <div style="display: flex; flex-direction: column;">
-            <img src="images/replit_thumbnail.png" alt="Replit Thumbnail">
-            <div style="display: flex;">
-              <span class="hover-black">My</span>
-              <span style='color: rgb(222, 116, 60); text-decoration: underline;'>Replit</span>
-            </div>
-          </div>
-        </button>
-        <div class="dropdown2-content2">
-          <a href="https://replit.com/@hikite1/Adventure-Story">Adventure Story</a>
-          <a href="https://replit.com/@hikite1/Turtle-Art">Turtle Art</a>
-          <!-- Add more projects as needed -->
-        </div>
-      </div>
-    </div>
-    <div class="chainborder3">
-      <img src="images/chainFrame.png" alt="Chain Frame" />
-      <div class="text-wrapper4">
-        <h2>My Videos...</h2>
-      </div> 
-    </div>
-    <div class="google-drive">
-      <a href="https://drive.google.com/drive/folders/1gzMGkt8KnwCWCKhSsZcIb9iN5p8Ow69n?usp=drive_link">Google Drive Videos</a>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keith Jackson's Profile Page</title>
+  <link rel="stylesheet" href="profile.css" />
+  <link href="https://fonts.googleapis.com/css?family=Rancho&effect=fire-animation&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js" defer></script>
+</head>
+<body>
+  <div class="background-video">
+    <video autoplay muted loop id="background-video">
+      <source src="images/mobile_fireBG.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="jumbotron">
+    <img src="images/Dragon Banner.jpg" alt="Dragon Banner" />
+    <div class="text-wrapper">
+      <h1 class="font-effect-fire-animation">
+        <em>
+          <span class="letter-white">Ke</span><span class="letter-yellow">i</span><span class="letter-yellow">t</span><span class="letter-orange">h</span> <span class="letter-orange">J</span><span class="letter-light-orange">a</span><span class="letter-light-orange-large">c</span><span class="letter-red">k</span><span class="letter-red-large">s</span><span class="letter-dark-red">o</span><span class="letter-dark-red-largest">n</span>
+        </em>
+      </h1>
     </div>
   </div>
-    <div class="youtube-container">
-      <iframe id="youtube-frame" width="95%" height="550" src="https://www.youtube.com/embed/348yyj_iG4s?playlist=bdgXuVDv9DM,348yyj_iG4s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+  <div class="profile">
+    <img id="moving-image" src="images/profile1.jpg" alt="KJ Profile Photo" />
+  </div>
+
+  <div class="audio-player">
+    <label for="song-selector">Choose a song:</label>
+    <select id="song-selector" onchange="changeSong()">
+      <option value="mp3/Matisyahu - One Day (YouTube Version)_256k.mp3" selected>
+        One Day by Matisyahu
+      </option>
+      <option value="mp3/We_Care_Alot.mp3">We Care a Lot Cover</option>
+      <option value="mp3/Brass_Against_Mother_Danzig_cover_ft_Liza_Colby.mp3">Brass Against - Mother</option>
+    </select>
+    <audio id="audio-player" controls loop style="width: 100%; margin-top: 1rem;">
+      <source src="mp3/Matisyahu - One Day (YouTube Version)_256k.mp3" type="audio/mpeg">
+      Your browser does not support HTML5 audio.
+    </audio>
+  </div>
+
+  <div class="chainborder">
+    <img src="images/chainFrame.png" alt="Chain Frame" />
+    <div class="text-wrapper1">
+      <h2>About Me...</h2>
     </div>
-    
-    <!--link to script functions are best placed before the closing body tag-->
-    <script src="https://www.youtube.com/iframe_api"></script>
-    <script src="profile.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const loadEl = document.querySelector('#load');
-        });
-    </script>
-  </body>
+  </div>
+
+  <div class="parent-container" style="position: relative;">
+    <div class="text-wrapper2-linkedin">
+      <img src="images/in_thumbnail.png" alt="LinkedIn Thumbnail">
+      <h3>
+        <strong>My <a href="https://www.linkedin.com/in/keithjackson1976/" id="linkedin-link" onmouseover="linkedInShowPreview()" onmouseout="linkedInHidePreview()"><span style='color: blue;'>LinkedIn</span></a></strong>
+      </h3>
+      <div id="linkedin-preview" class="linkedin-preview"></div>
+    </div>
+  </div>
+
+  <div class="text-wrapper2-github">
+    <img src="images/github_thumbnail.png" alt="GitHub Thumbnail">
+    <h3>
+      <strong>My <a href="https://github.com/hikite1" id="github-link"><span style='color: black;'>Git</span><span style='color: white;'>Hub</span></a></strong>
+    </h3>
+    <div id="github-preview" class="github-preview"></div>
+  </div>
+
+  <div class="text-wrapper2-hackerrank">
+    <img src="images/hacker_thumbnail.jpg" alt="HackerRank Thumbnail">
+    <h3>
+      <strong>My <a href="https://www.hackerrank.com/hikite1" id="hackerrank-link"><span style='color: #066b24;'>HackerRank</span></a></strong>
+    </h3>
+    <div id="hackerrank-preview" class="hackerrank-preview"></div>
+  </div>
+
+  <div class="chainborder2">
+    <img src="images/chainFrame.png" alt="Chain Frame" />
+    <div class="text-wrapper3">
+      <h2>My Projects...</h2>
+    </div>
+  </div>
+
+  <div class="navbar">
+    <div class="dropdown">
+      <button class="dropbtn">
+        <h3>
+          <span class="logo-text">🄶🄰🄼🄴🅂</span><br>
+          <strong><span class="hover-black">My</span><span style="color: #b83789;">Games</span></strong>
+        </h3>
+      </button>
+      <div class="dropdown-content">
+        <a href="https://acereraknroll.netlify.app/signin">AcererakNRoll</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="navbar2">
+    <div class="dropdown2">
+      <button class="dropbtn2">
+        <div style="display: flex; flex-direction: column;">
+          <img src="images/replit_thumbnail.png" alt="Replit Thumbnail">
+          <div style="display: flex;">
+            <span class="hover-black">My</span>
+            <span style='color: rgb(222, 116, 60); text-decoration: underline;'>Replit</span>
+          </div>
+        </div>
+      </button>
+      <div class="dropdown2-content2">
+        <a href="https://replit.com/@hikite1/Adventure-Story">Adventure Story</a>
+        <a href="https://replit.com/@hikite1/Turtle-Art">Turtle Art</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="chainborder3">
+    <img src="images/chainFrame.png" alt="Chain Frame" />
+    <div class="text-wrapper4">
+      <h2>My Videos...</h2>
+    </div>
+  </div>
+
+  <div class="google-drive">
+    <a href="https://drive.google.com/drive/folders/1gzMGkt8KnwCWCKhSsZcIb9iN5p8Ow69n?usp=drive_link">
+      Google Drive Videos
+    </a>
+  </div>
+
+  <div class="youtube-container">
+    <iframe id="youtube-frame" width="95%" height="550" src="https://www.youtube.com/embed/348yyj_iG4s?playlist=bdgXuVDv9DM,348yyj_iG4s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="profile.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const loadEl = document.querySelector('#load');
+    });
+  </script>
+</body>
 </html>
