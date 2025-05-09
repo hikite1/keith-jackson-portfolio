@@ -186,7 +186,7 @@ img {
 }
 
 .text-wrapper2-linkedin, .text-wrapper2-github, .text-wrapper2-hackerrank,
-.navbar, .navbar2 {
+.navbar, .navbar2, .google-drive {
   font-size: clamp(1.35rem, 4.5vw, 1.8rem);
   text-decoration: none;
   color: #00ffff;
@@ -203,14 +203,14 @@ img {
 .text-wrapper2-github:hover,
 .text-wrapper2-hackerrank:hover,
 .navbar:hover,
-.navbar2:hover {
+.navbar2:hover, .google-drive:hover, .google-drive:hover a {
   background-color: #00ffff;
   color: black;
 }
 
 .text-wrapper2-linkedin img,
 .text-wrapper2-hackerrank img,
-.dropbtn2 img {
+.dropbtn2 img, .google-drive img {
   margin: 0 auto 0.5rem;
   width: 25vw;
   flex-shrink: 0;
@@ -304,7 +304,7 @@ iframe {
 .youtube-container iframe {
   width: 98%;
   aspect-ratio: 16 / 9;
-  border: none;
+  border: 1px solid #00ffff;
   border-radius: 8px;
 }
 
