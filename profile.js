@@ -50,10 +50,19 @@ player.loadVideoById(videoList[0]);
 
 // Add an event listener to the document to detect clicks outside the container
 document.addEventListener('click', function(event) {
-    if (!document.getElementById('youtube-container').contains(event.target)) {
+    if (!document.getElementById('.youtube-container').contains(event.target)) {
         rotateVideos();
     }
 });
+
+
+
+
+
+
+
+
+
 
 function changeSong() {
     // Get the selected song from the dropdown
@@ -67,3 +76,4 @@ function changeSong() {
     // Play the new song automatically (optional)
     audioPlayer.play();
   }
+
