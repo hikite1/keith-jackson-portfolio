@@ -77,3 +77,14 @@ function changeSong() {
     audioPlayer.play();
   }
 
+
+
+
+
+
+
+
+
+function handleClick() {
+  alert('Oops! This is not a button 😄');
+}

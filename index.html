@@ -18,15 +18,12 @@
       </video>
     </div>
 
+    <div class="scroll-prompt" id="scrollPrompt">
+      <span>↓ Scroll Down</span>
+    </div>
+
     <div class="jumbotron">
       <img src="images/Dragon Banner.jpg" alt="Dragon Banner" />
-      <div class="text-wrapper">
-        <h1 class="font-effect-fire-animation">
-          <em>
-            <span class="letter-white">Ke</span><span class="letter-yellow">i</span><span class="letter-yellow">t</span><span class="letter-orange">h</span> <span class="letter-orange">J</span><span class="letter-light-orange">a</span><span class="letter-light-orange-large">c</span><span class="letter-red">k</span><span class="letter-red-large">s</span><span class="letter-dark-red">o</span><span class="letter-dark-red-largest">n</span>
-          </em>
-        </h1>
-      </div>
     </div>
 
     <div class="profile">
@@ -48,7 +45,7 @@
       </audio>
     </div>
 
-    <div class="chainborder">
+    <div class="chainborder" onclick="handleNotAButtonClick()">
       <img src="images/chainFrame.png" alt="Chain Frame" />
       <div class="text-wrapper1">
         <h2>About Me...</h2>
@@ -137,6 +134,61 @@
     <div class="youtube-container">
       <iframe id="youtube-frame" src="https://www.youtube.com/embed/348yyj_iG4s?playlist=bdgXuVDv9DM,348yyj_iG4s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
+
+    <div id="not-a-button-video" class="hidden-video">
+      <div class="fun-message">
+        Oh no! You have deleted all files.<br>
+        Self-destruct begins in <span id="countdown">5</span>...<br>
+        
+      </div>
+      <video id="funVideo" autoplay muted>
+        <source src="images/not-a-button-video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <script>
+      window.addEventListener('scroll', () => {
+        const prompt = document.getElementById('scrollPrompt');
+        if (window.scrollY > 30) {
+          prompt.style.opacity = '0';
+          prompt.style.pointerEvents = 'none';
+        } else {
+          prompt.style.opacity = '1';
+          prompt.style.pointerEvents = 'auto';
+        }
+      });
+    </script>
+
+    <script>
+      function handleNotAButtonClick() {
+        const container = document.getElementById('not-a-button-video');
+        const video = document.getElementById('funVideo');
+        const countdownEl = document.getElementById('countdown');
+
+        container.style.display = 'flex';
+        video.currentTime = 0;
+        video.play();
+
+        // Countdown text effect
+        let count = 5;
+        countdownEl.textContent = count;
+        const interval = setInterval(() => {
+          count--;
+          if (count > 0) {
+            countdownEl.textContent = count;
+          } else {
+            clearInterval(interval);
+            countdownEl.innerHTML = 'Ha ha! <strong>Just kidding. That isn\'t a button.</strong>';
+
+          }
+        }, 1000);
+
+        video.onended = () => {
+          container.style.display = 'none';
+        };
+      }
+    </script>
 
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="profile.js"></script>

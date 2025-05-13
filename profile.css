@@ -60,6 +60,68 @@ img {
   gap: 2rem;
 }
 
+.scroll-prompt {
+  position: absolute; 
+  bottom: 30vh; 
+  left: 50%;
+  transform: translateX(-50%); 
+  background: rgba(255, 255, 255, 0.1);
+  color: #00ffff;
+  padding: 8px 14px;
+  border: 1px solid #00ffff;
+  border-radius: 20px;
+  font-size: 6vw; 
+  font-weight: bold;
+  animation: bounce 1.8s infinite;
+  transition: opacity 0.4s ease;
+  z-index: 9999;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-8px);
+  }
+}
+
+.hidden-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.85);
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  z-index: 9999;
+  text-align: center;
+  padding: 1rem;
+}
+
+.hidden-video video {
+  max-width: 90%;
+  max-height: 60%;
+  margin-top: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #ff6600;
+}
+
+.fun-message {
+  color: white;
+  font-size: 2rem;
+  text-shadow: 1px 1px 4px black;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 .jumbotron {
   display: flex;
   flex-direction: column;
@@ -74,57 +136,6 @@ img {
 .jumbotron img {
   border-radius: 8px;
 }
-
-.text-wrapper {
-    position: absolute;
-    top: 3rem;
-    left: 6.5rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5rem;
-    word-break: normal;
-    white-space: nowrap;
-    padding: 0 1rem;
-    max-width: 95%;
-    overflow: hidden;
-  }
-
-  .letter-white, .letter-yellow, .letter-orange {
-    font-size: clamp(1.25rem, 7.5vw, 2.5rem);
-  } 
-
-  .letter-light-orange {
-    font-size: clamp(1.5rem, 8vw, 3rem);
-  } 
-
-  .letter-light-orange-large {
-    font-size: clamp(2rem, 9vw, 3.5rem);
-  }
-
-  .letter-red {
-    font-size: clamp(2.5rem, 10vw, 4rem);
-  } 
-
-  .letter-red-large {
-    font-size: clamp(3rem, 11vw, 4.5rem);
-  } 
-
-  .letter-dark-red {
-    font-size: clamp(3.5rem, 12vw, 5rem);
-  }
-
-  .letter-dark-red-largest {
-    font-size: clamp(4rem, 13vw, 5.5rem);
-  }
-
-
-.letter-yellow { color: #FFD774 }
-.letter-orange { color: #FBC00E; }
-.letter-light-orange, .letter-light-orange-large { color: #E9A33A; }
-.letter-red, .letter-red-large { color: #E15B18; } 
-.letter-dark-red { color: rgb(223, 47, 16);  }
-.letter-dark-red-largest { color: rgb(223, 47, 16); }
 
 .profile {
   text-align: center;
