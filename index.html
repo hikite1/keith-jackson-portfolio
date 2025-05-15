@@ -24,6 +24,7 @@
 
     <div class="jumbotron">
       <img src="images/Dragon Banner.jpg" alt="Dragon Banner" />
+      <div class="hover-text">Keith Jackson</div>
     </div>
 
     <div class="profile">
@@ -132,71 +133,50 @@
     </div>
 
     <div class="youtube-container">
-      <iframe id="youtube-frame" src="https://www.youtube.com/embed/348yyj_iG4s?playlist=bdgXuVDv9DM,348yyj_iG4s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe
+        id="youtube-frame"
+        src="https://www.youtube.com/embed/348yyj_iG4s?enablejsapi=1"
+        frameborder="0"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
     </div>
 
     <div id="not-a-button-video" class="hidden-video">
       <div class="fun-message">
         Oh no! You have deleted all files.<br>
         Self-destruct begins in <span id="countdown">5</span>...<br>
-        
       </div>
       <video id="funVideo" autoplay muted>
         <source src="images/not-a-button-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+      <div id="countdown" class="countdown-display"></div>
+      <div class="fun-message"></div>
     </div>
 
     <script>
-      window.addEventListener('scroll', () => {
-        const prompt = document.getElementById('scrollPrompt');
-        if (window.scrollY > 30) {
-          prompt.style.opacity = '0';
-          prompt.style.pointerEvents = 'none';
-        } else {
-          prompt.style.opacity = '1';
-          prompt.style.pointerEvents = 'auto';
-        }
-      });
+      document.addEventListener('DOMContentLoaded', function () {
+        scrollFunction ();
+      })
     </script>
 
     <script>
-      function handleNotAButtonClick() {
-        const container = document.getElementById('not-a-button-video');
-        const video = document.getElementById('funVideo');
-        const countdownEl = document.getElementById('countdown');
-
-        container.style.display = 'flex';
-        video.currentTime = 0;
-        video.play();
-
-        // Countdown text effect
-        let count = 5;
-        countdownEl.textContent = count;
-        const interval = setInterval(() => {
-          count--;
-          if (count > 0) {
-            countdownEl.textContent = count;
-          } else {
-            clearInterval(interval);
-            countdownEl.innerHTML = 'Ha ha! <strong>Just kidding. That isn\'t a button.</strong>';
-
-          }
-        }, 1000);
-
-        video.onended = () => {
-          container.style.display = 'none';
-        };
-      }
+      document.addEventListener('DOMContentLoaded', function () {
+        handleNotAButtonClick();
+      })
     </script>
 
     <script src="https://www.youtube.com/iframe_api"></script>
+
     <script src="profile.js"></script>
+
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         const loadEl = document.querySelector('#load');
       });
     </script>
+
   </div>
 </body>
 </html>

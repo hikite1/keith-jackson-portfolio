@@ -1,69 +1,3 @@
-var videoIndex = 0;
-var videoList = [
-    "348yyj_iG4s",
-    "bdgXuVDv9DM",
-    "Y_ISkADL330",
-    "70mGPnlkmBM",
-    "_rqwO6BJR18",
-    "gGFg6jzjius"
-    // Add more video IDs as needed
-];
-
-var player; // YouTube Iframe API player object
-var timeoutId; // ID of the timeout
-var pausedTime; // Time when the video was paused
-
-function onYouTubeIframeAPIReady() {
-  console.log("onYouTubeIframeAPIReady called");
-    player = new YT.Player('youtube-frame', {
-        events: {
-            'onStateChange': onPlayerStateChange
-        }
-    });
-}
-
-function onPlayerStateChange(event) {
-    if (event.data === YT.PlayerState.ENDED) {
-        rotateVideos();
-    } else if (event.data === YT.PlayerState.PAUSED) {
-        pausedTime = new Date().getTime();
-        timeoutId = setTimeout(checkPauseTime, 10000); // Check pause time after 10 seconds
-    } else if (event.data === YT.PlayerState.PLAYING) {
-        clearTimeout(timeoutId); // Clear the timeout
-    }
-}
-
-function checkPauseTime() {
-    var currentTime = new Date().getTime();
-    if (currentTime - pausedTime >= 10000) {
-        rotateVideos();
-    }
-}
-
-function rotateVideos() {
-    videoIndex = (videoIndex + 1) % videoList.length;
-    player.loadVideoById(videoList[videoIndex]);
-}
-
-// Load the first video
-player.loadVideoById(videoList[0]);
-
-// Add an event listener to the document to detect clicks outside the container
-document.addEventListener('click', function(event) {
-    if (!document.getElementById('.youtube-container').contains(event.target)) {
-        rotateVideos();
-    }
-});
-
-
-
-
-
-
-
-
-
-
 function changeSong() {
     // Get the selected song from the dropdown
     var songSelector = document.getElementById("song-selector");
@@ -85,6 +19,134 @@ function changeSong() {
 
 
 
-function handleClick() {
-  alert('Oops! This is not a button 😄');
+
+function scrollFunction() {
+    window.addEventListener('scroll', () => {
+        const prompt = document.getElementById('scrollPrompt');
+        if (window.scrollY > 30) {
+        prompt.style.opacity = '0';
+        prompt.style.pointerEvents = 'none';
+        } else {
+        prompt.style.opacity = '1';
+        prompt.style.pointerEvents = 'auto';
+        }        
+    });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+function handleNotAButtonClick() {
+  const container = document.getElementById('not-a-button-video');
+  const video = document.getElementById('funVideo');
+  const countdownEl = document.getElementById('countdown');
+  const messageEl = document.querySelector('.fun-message');
+
+  container.style.display = 'flex';
+  video.currentTime = Math.max(video.duration - 10, 0);
+  video.play();
+
+  // Step 1: "Oh no!" countdown
+  messageEl.innerHTML = "Oh no! You have deleted all files. Self-destruct begins in...";
+  let count = 5;
+  countdownEl.textContent = count;
+  
+  const selfDestructInterval = setInterval(() => {
+    count--;
+    countdownEl.textContent = count;
+
+    if (count <= 0) {
+      clearInterval(selfDestructInterval);
+
+      // Step 2: Clear text
+      countdownEl.textContent = '';
+      messageEl.innerHTML = '';
+
+      // Step 3: Ha ha message
+      setTimeout(() => {
+        messageEl.innerHTML = 'Ha ha! <strong>Just kidding. That isn’t a button.</strong>';
+
+        // Step 4: Clear text again
+        setTimeout(() => {
+          messageEl.innerHTML = '';
+
+          // Step 5: Rebooting countdown
+          let rebootCount = 3;
+          countdownEl.textContent = `Rebooting in... ${rebootCount}`;
+
+          const rebootInterval = setInterval(() => {
+            rebootCount--;
+            if (rebootCount > 0) {
+              countdownEl.textContent = `Rebooting in... ${rebootCount}`;
+            } else {
+              clearInterval(rebootInterval);
+
+              // Step 6: Clear everything and hide
+              countdownEl.textContent = '';
+              container.style.display = 'none';
+            }
+          }, 1000);
+        }, 2000); // Wait 2s after Ha ha message
+      }, 1000); // Wait 1s after countdown
+    }
+  }, 1000);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var videoIndex = 0;
+var videoList = [
+  "348yyj_iG4s",
+  "bdgXuVDv9DM",
+  "Y_ISkADL330",
+  "70mGPnlkmBM",
+  "_rqwO6BJR18",
+  "gGFg6jzjius"
+];
+
+var player;
+
+function onYouTubeIframeAPIReady() {
+  console.log("YouTube API Ready");
+  player = new YT.Player('youtube-frame', {
+    events: {
+      'onStateChange': onPlayerStateChange
+    }
+  });
+}
+
+function onPlayerStateChange(event) {
+  if (event.data === YT.PlayerState.ENDED) {
+    rotateVideos();
+  }
+}
+
+function rotateVideos() {
+  videoIndex = (videoIndex + 1) % videoList.length;
+  console.log("Rotating to video:", videoList[videoIndex]);
+  player.cueVideoById(videoList[videoIndex]);
+}
+
+// Rotate every 10 seconds
+setInterval(rotateVideos, 10000);

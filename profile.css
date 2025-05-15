@@ -46,12 +46,6 @@ body {
   background-color: black;
 }
 
-img {
-  max-width: 98%;
-  height: auto;
-  display: block;
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -110,6 +104,14 @@ img {
   box-shadow: 0 0 20px #ff6600;
 }
 
+.countdown-display {
+  font-size: 3rem;
+  margin: 1rem 0;
+  color: white;
+  text-shadow: 1px 1px 4px black;
+  animation: fadeIn 1s ease;
+}
+
 .fun-message {
   color: white;
   font-size: 2rem;
@@ -129,12 +131,32 @@ img {
   align-items: center;
   text-align: center;
   width: 98%;
+  height: auto;
   padding: 2rem 1rem;
   position: relative;
 }
 
 .jumbotron img {
   border-radius: 8px;
+  width: 98%;
+  height: 20vh;
+}
+
+.jumbotron .hover-text {
+  position: absolute;
+  bottom: 10;
+  left: 0;
+  width: 100%;
+  color: #A2DCE7;
+  font-family: 'Sedgwick Ave Display', cursive;
+  font-size: clamp(1.5rem, 7.5vw, 2.25rem);
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.jumbotron:hover .hover-text {
+  opacity: 1;
 }
 
 .profile {
@@ -152,9 +174,9 @@ img {
 }
 
 @keyframes move {
-  0% { transform: translateX(0); }
-  50% { transform: translateX(50vw); }
-  100% { transform: translateX(0); }
+  0% { transform: translateX(-25vw); }
+  50% { transform: translateX(28vw); }
+  100% { transform: translateX(-25vw); }
 }
 
 .audio-player audio {
@@ -887,18 +909,29 @@ iframe {
     background-color: black;
   }
 
-  img {
-    max-width: 98%;
-    height: auto;
-    display: block;
-  }
-
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 2rem 1rem;
     gap: 2rem;
+  }
+
+  .scroll-prompt {
+    position: absolute; 
+    bottom: 30vh; 
+    left: 50%;
+    transform: translateX(-50%); 
+    background: rgba(255, 255, 255, 0.1);
+    color: #00ffff;
+    padding: 8px 14px;
+    border: 1px solid #00ffff;
+    border-radius: 20px;
+    font-size: 2vw; 
+    font-weight: bold;
+    animation: bounce 1.8s infinite;
+    transition: opacity 0.4s ease;
+    z-index: 9999;
   }
 
   .jumbotron {
@@ -914,6 +947,7 @@ iframe {
 
   .jumbotron img {
     border-radius: 8px;
+    width: 80%;
     height: 50vh;
   }
 
@@ -982,9 +1016,9 @@ iframe {
   }
 
   @keyframes move {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(70vw); }
-    100% { transform: translateX(0); }
+    0% { transform: translateX(-350%); } /* Start from the left margin */
+    50% { transform: translateX(42vw); }
+    100% { transform: translateX(-350%); } /* End at the left margin */
   }
 
   .audio-player audio {
