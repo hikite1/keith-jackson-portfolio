@@ -281,10 +281,6 @@ body {
   color: black;
 }
 
-.google-drive:hover a {
-  color: black;
-}
-
 .text-wrapper2-linkedin img,
 .text-wrapper2-hackerrank img,
 .dropbtn2 img, .google-drive img {
@@ -390,9 +386,14 @@ body {
 .google-drive a {
   text-align: center;
   display: block;
-  color: #00ffff;
+  color: #A2DCE7;
+  font-family: 'Sedgwick Ave Display', cursive;
   font-size: 2rem;
   margin: 1rem 0 0.5rem;
+}
+
+.google-drive:hover a {
+  color: black;
 }
 
 iframe {
