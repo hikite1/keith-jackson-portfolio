@@ -49,11 +49,18 @@ function handleNotAButtonClick() {
   const container = document.getElementById('not-a-button-video');
   const video = document.getElementById('funVideo');
   const countdownEl = document.getElementById('countdown');
+  const rebootCountdownEl = document.getElementById('reboot-countdown');
   const messageEl = document.querySelector('.fun-message');
 
   container.style.display = 'flex';
   video.currentTime = Math.max(video.duration - 10, 0);
   video.play();
+
+  // Reset the countdown elements
+  countdownEl.style.display = 'block';
+  countdownEl.textContent = '5';
+  rebootCountdownEl.style.display = 'block';
+  rebootCountdownEl.textContent = '';
 
   // Step 1: "Oh no!" countdown
   messageEl.innerHTML = "Oh no! You have deleted all files. Self-destruct begins in...";
@@ -65,10 +72,10 @@ function handleNotAButtonClick() {
     countdownEl.textContent = count;
 
     if (count <= 0) {
+      countdownEl.style.display = 'none'; // Hide the countdown element
       clearInterval(selfDestructInterval);
 
       // Step 2: Clear text
-      countdownEl.textContent = '';
       messageEl.innerHTML = '';
 
       // Step 3: Ha ha message
@@ -81,17 +88,18 @@ function handleNotAButtonClick() {
 
           // Step 5: Rebooting countdown
           let rebootCount = 3;
-          countdownEl.textContent = `Rebooting in... ${rebootCount}`;
+          rebootCountdownEl.textContent = `Rebooting in... ${rebootCount}`;
 
           const rebootInterval = setInterval(() => {
             rebootCount--;
             if (rebootCount > 0) {
-              countdownEl.textContent = `Rebooting in... ${rebootCount}`;
+              rebootCountdownEl.textContent = `Rebooting in... ${rebootCount}`;
             } else {
               clearInterval(rebootInterval);
 
               // Step 6: Clear everything and hide
-              countdownEl.textContent = '';
+              rebootCountdownEl.textContent = '';
+              rebootCountdownEl.style.display = 'none'; // Hide the reboot countdown element
               container.style.display = 'none';
             }
           }, 1000);

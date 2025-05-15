@@ -143,15 +143,16 @@
     </div>
 
     <div id="not-a-button-video" class="hidden-video">
-      <div class="fun-message">
-        Oh no! You have deleted all files.<br>
-        Self-destruct begins in <span id="countdown">5</span>...<br>
-      </div>
-      <video id="funVideo" autoplay muted>
+      <div class="fun-message"></div>
+
+      <video id="funVideo">
         <source src="images/not-a-button-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div id="countdown" class="countdown-display"></div>
+
+      <div id="countdown" class="countdown-display">5</div>
+
+      <div id="reboot-countdown" class="countdown-display"></div>
       <div class="fun-message"></div>
     </div>
 
@@ -163,19 +164,13 @@
 
     <script>
       document.addEventListener('DOMContentLoaded', function () {
-        handleNotAButtonClick();
+        document.getElementById('not-a-button').addEventListener('click', handleNotAButtonClick);
       })
     </script>
 
     <script src="https://www.youtube.com/iframe_api"></script>
 
     <script src="profile.js"></script>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const loadEl = document.querySelector('#load');
-      });
-    </script>
 
   </div>
 </body>
