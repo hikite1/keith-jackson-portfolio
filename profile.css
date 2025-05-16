@@ -367,7 +367,7 @@ body {
     height: auto;
     display: block;
     margin-bottom: 0.5rem;
-    margin-left: 7vw;
+    margin: auto;
   }
 
   .dropbtn2 div:last-child {
@@ -539,14 +539,6 @@ iframe {
     margin: 0 auto 0.5rem;
     width: 40vw;
     flex-shrink: 0;
-  }
-
-  .dropbtn3 img {
-    width: 125px;
-    height: auto;
-    display: block;
-    margin-bottom: 0.5rem;
-    margin-left: 4vw;
   }
 
   .youtube-container {
