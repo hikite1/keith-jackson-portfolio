@@ -97,7 +97,7 @@ function handleNotAButtonClick() {
             } else {
               clearInterval(rebootInterval);
 
-              // Step 6: Clear everything and hide
+              // Step 6: Reboot complete
               rebootCountdownEl.textContent = '';
               rebootCountdownEl.style.display = 'none'; // Hide the reboot countdown element
               container.style.display = 'none';

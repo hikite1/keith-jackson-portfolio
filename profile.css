@@ -295,10 +295,20 @@ body {
   flex-shrink: 0;
 }
 
-.dropdown-content,
-.dropdown2-content2 {
+.dropdown-content {
   display: none;
   position: relative;
+  background-color: #111;
+  min-width: 150px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  top: 100%;
+  left: 0;
+}
+
+.dropdown2-content2 {
+  display: none;
+  position: absolute;
   background-color: #111;
   min-width: 150px;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
@@ -381,6 +391,42 @@ body {
 .navbar:hover .hover-black,
 .navbar2:hover .hover-black {
   color: black;
+}
+
+.tooltip-link {
+  position: relative;
+  cursor: pointer;
+  color: #4ea8ff;
+  text-decoration: underline;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 260px;
+  background-color: rgba(0,0,0,0.85);
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 0.85rem;
+  line-height: 1.2rem;
+
+  position: absolute;
+  bottom: 125%;  /* Show above the link */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.tooltip-link:hover .tooltip-text,
+.tooltip-link:focus .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .google-drive a {
@@ -767,6 +813,21 @@ iframe {
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ANDROID TABLET MEDIA QUERIES */
 @media screen and (min-width: 768px) {
   .jumbotron {
@@ -1022,9 +1083,9 @@ iframe {
   }
 
   @keyframes move {
-    0% { transform: translateX(-350%); } /* Start from the left margin */
+    0% { transform: translateX(-350%); } 
     50% { transform: translateX(42vw); }
-    100% { transform: translateX(-350%); } /* End at the left margin */
+    100% { transform: translateX(-350%); } 
   }
 
   .audio-player audio {
