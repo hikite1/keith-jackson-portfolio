@@ -468,20 +468,10 @@ iframe {
 /* ANDROID MEDIA QUERIES FOR LANDSCAPE */
 
 @media screen and (orientation: landscape) and (max-height: 500px) {
-  .jumbotron {
-    display: flex;
-    flex-direction: column;
-    margin-left: .5rem;
-    align-items: center;
-    text-align: center;
-    height: auto;
-    padding: 2rem 1rem;
-    position: relative;
-  }
-
   .jumbotron img {
     border-radius: 8px;
     height: 50vh;
+    width: 80% !important;
   }
 
   .scroll-prompt {
