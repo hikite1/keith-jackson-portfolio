@@ -276,7 +276,7 @@ body {
 .text-wrapper2-github:hover,
 .text-wrapper2-hackerrank:hover,
 .navbar:hover,
-.navbar2:hover, .google-drive:hover {
+.navbar2:hover, .navbar3:hover, .google-drive:hover {
   background-color: #00ffff;
   color: black;
 }
@@ -295,20 +295,9 @@ body {
   flex-shrink: 0;
 }
 
-.dropdown-content {
+.dropdown-content, .dropdown2-content2 {
   display: none;
   position: relative;
-  background-color: #111;
-  min-width: 150px;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
-  z-index: 1;
-  top: 100%;
-  left: 0;
-}
-
-.dropdown2-content2 {
-  display: none;
-  position: absolute;
   background-color: #111;
   min-width: 150px;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
