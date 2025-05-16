@@ -259,7 +259,7 @@ body {
 }
 
 .text-wrapper2-linkedin, .text-wrapper2-github, .text-wrapper2-hackerrank,
-.navbar, .navbar2, .google-drive {
+.navbar, .navbar2, .navbar3, .google-drive {
   font-size: clamp(1.35rem, 4.5vw, 1.8rem);
   text-decoration: none;
   color: #00ffff;
@@ -332,7 +332,8 @@ body {
   display: block;
 }
 
-.dropbtn, .dropbtn2 {
+.dropbtn, .dropbtn2, .dropbtn3 {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -389,7 +390,7 @@ body {
 }
 
 .navbar:hover .hover-black,
-.navbar2:hover .hover-black {
+.navbar2:hover .hover-black, navbar3:hover .hover-black {
   color: black;
 }
 
@@ -410,13 +411,11 @@ body {
   padding: 8px;
   font-size: 0.85rem;
   line-height: 1.2rem;
-
   position: absolute;
   bottom: 125%;  /* Show above the link */
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
-
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
