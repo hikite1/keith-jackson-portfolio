@@ -519,6 +519,14 @@ iframe {
     100% { transform: translateX(-35vw); }
   }
 
+  .hidden-video video {
+    max-width: 90%;
+    max-height: 40%;
+    margin-top: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #ff6600;
+  }
+
   .chainborder img,
   .chainborder2 img,
   .chainborder3 img {
