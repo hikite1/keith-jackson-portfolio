@@ -482,67 +482,35 @@ iframe {
   .jumbotron {
     display: flex;
     flex-direction: column;
+    margin-left: .5rem;
     align-items: center;
     text-align: center;
-    width: 98%;
+    height: auto;
     padding: 2rem 1rem;
     position: relative;
   }
 
   .jumbotron img {
-    width: 98%;
     border-radius: 8px;
+    height: 50vh;
   }
 
-  .text-wrapper {
-    position: absolute;
-    top: 7rem;
-    left: 22rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5rem;
-    word-break: normal;
-    white-space: nowrap;
-    padding: 0 1rem;
-    max-width: 95%;
-    overflow: hidden;
+  .scroll-prompt {
+    position: absolute; 
+    bottom: 30vh; 
+    left: 50%;
+    transform: translateX(-50%); 
+    background: rgba(255, 255, 255, 0.1);
+    color: #00ffff;
+    padding: 8px 14px;
+    border: 1px solid #00ffff;
+    border-radius: 20px;
+    font-size: 3vw; 
+    font-weight: bold;
+    animation: bounce 1.8s infinite;
+    transition: opacity 0.4s ease;
+    z-index: 9999;
   }
-
-  .letter-white, .letter-yellow, .letter-orange {
-    font-size: clamp(1.25rem, 7.5vw, 2.5rem);
-  } 
-
-  .letter-light-orange {
-    font-size: clamp(1.5rem, 8vw, 3rem);
-  } 
-
-  .letter-light-orange-large {
-    font-size: clamp(2rem, 9vw, 3.5rem);
-  }
-
-  .letter-red {
-    font-size: clamp(2.5rem, 10vw, 4rem);
-  } 
-
-  .letter-red-large {
-    font-size: clamp(4.5rem, 14vw, 6rem);
-  } 
-
-  .letter-dark-red {
-    font-size: clamp(6rem, 16.5vw, 8rem);
-  }
-
-  .letter-dark-red-largest {
-    font-size: clamp(7rem, 18vw, 9rem);
-  }
-
-  .letter-yellow { color: #FFD774; }
-  .letter-orange { color: #FBC00E; }
-  .letter-light-orange, .letter-light-orange-large { color: #E9A33A; }
-  .letter-red, .letter-red-large { color: #E15B18; }
-  .letter-dark-red { color: rgb(223, 47, 16); }
-  .letter-dark-red-largest { color: rgb(223, 47, 16);}
 
   .profile {
     text-align: center;
@@ -555,13 +523,13 @@ iframe {
     max-width: 150px;
     height: auto;
     border-radius: 50%;
-    animation: move 10s infinite ease-in-out;
+    animation: move-landscape 10s infinite ease-in-out;
   }
 
-  @keyframes move {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(70vw); }
-    100% { transform: translateX(0); }
+  @keyframes move-landscape {
+    0% { transform: translateX(-35vw); }
+    50% { transform: translateX(35vw); }
+    100% { transform: translateX(-35vw); }
   }
 
   .chainborder img,
@@ -1016,56 +984,6 @@ iframe {
     width: 80%;
     height: 50vh;
   }
-
-  .text-wrapper {
-    position: absolute;
-    top: 8rem;
-    left: 30rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5rem;
-    word-break: normal;
-    white-space: nowrap;
-    padding: 0 1rem;
-    max-width: 95%;
-    overflow: hidden;
-  }
-
-  .letter-white, .letter-yellow, .letter-orange {
-    font-size: clamp(5rem, 10vw, 5rem);
-  } 
-
-  .letter-light-orange {
-    font-size: clamp(5.5rem, 11vw, 5.5rem);
-  } 
-
-  .letter-light-orange-large {
-    font-size: clamp(6rem, 12vw, 6rem);
-  }
-
-  .letter-red {
-    font-size: clamp(6.5rem, 13vw, 6.5rem);
-  } 
-
-  .letter-red-large {
-    font-size: clamp(7rem, 14vw, 7rem);
-  } 
-
-  .letter-dark-red {
-    font-size: clamp(7.5rem, 15vw, 7.5rem);
-  }
-
-  .letter-dark-red-largest {
-    font-size: clamp(8rem, 16vw, 8rem);
-  }
-
-  .letter-yellow { color: #FFD774;  }
-  .letter-orange { color: #FBC00E; }
-  .letter-light-orange, .letter-light-orange-large { color: #E9A33A; }
-  .letter-red, .letter-red-large { color: #E15B18; }
-  .letter-dark-red { color: rgb(223, 47, 16);  }
-  .letter-dark-red-largest { color: rgb(223, 47, 16); }
 
   .profile {
     text-align: center;
