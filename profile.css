@@ -240,13 +240,26 @@ body {
 .chainborder2 img,
 .chainborder3 img {
   width: 100%;
-  height: auto;
+  height: 80vh;
+  display: block;
+}
+
+.chainborder h3, .chainborder2 h3, .chainborder3 h3 {
+  
+  font-size: clamp(1.5rem, 7.5vw, 2.25rem);
+  font-weight: 300;
+  color: #A2DCE7;
+  font-family: 'Sedgwick Ave Display', cursive;
+  text-align: center;
+  white-space: normal;
+  margin: 1rem 0;
+  width: 100%;
   display: block;
 }
 
 .text-wrapper1, .text-wrapper3, .text-wrapper4 {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: clamp(1.5rem, 7.5vw, 2.25rem);
@@ -446,7 +459,6 @@ body {
   text-align: center;
   display: block;
   color: #A2DCE7;
-  font-family: 'Sedgwick Ave Display', cursive;
   font-size: 2rem;
   margin: 1rem 0 0.5rem;
 }
@@ -553,7 +565,7 @@ iframe {
   .chainborder2 img,
   .chainborder3 img {
     width: 100%;
-    height: 400px;
+    height: 650px !important;
     display: block;
   }
 
