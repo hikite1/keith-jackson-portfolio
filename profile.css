@@ -483,6 +483,7 @@ iframe {
   max-width: 560px;
   padding: 1rem;
   box-sizing: border-box;
+  position: relative;
 }
 
 .youtube-container iframe {
@@ -490,6 +491,37 @@ iframe {
   aspect-ratio: 16 / 9;
   border-radius: 8px;
   margin: 2rem .5rem;
+}
+
+.youtube-container .tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  width: 260px;
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 42px 16px;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translateX(-50%);
+  z-index: 10;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.youtube-container:hover .tooltip-text,
+.youtube-container:focus-within .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 
