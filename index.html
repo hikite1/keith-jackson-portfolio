@@ -10,6 +10,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js" defer></script>
 </head>
 <body>
+  <nav class="top-navbar">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#videos">Videos</a></li>
+    </ul>
+  </nav>
   <div class="no-select">
     <div class="background-video">
       <video autoplay muted loop id="background-video">
@@ -46,7 +53,7 @@
       </audio>
     </div>
 
-    <div class="chainborder" onclick="handleNotAButtonClick()">
+    <div class="chainborder" id="about" onclick="handleNotAButtonClick()">
       <img src="images/chainFrame.png" alt="Chain Frame" />
       <div class="text-wrapper1">
         <h2>About Me...</h2>
@@ -80,7 +87,7 @@
       <div id="hackerrank-preview" class="hackerrank-preview"></div>
     </div>
 
-    <div class="chainborder2">
+    <div class="chainborder2" id="projects">
       <img src="images/chainFrame.png" alt="Chain Frame" />
       <div class="text-wrapper3">
         <h2>My Projects...</h2>
@@ -153,7 +160,7 @@
     </div>
 
 
-    <div class="chainborder3">
+    <div class="chainborder3" id="videos">
       <img src="images/chainFrame.png" alt="Chain Frame" />
       <div class="text-wrapper4">
         <h2>My Videos...</h2>
