@@ -1,10 +1,15 @@
 # Web-Pages
 #by Keith Jackson
 
-(Netlify)Profile - This is a web page to display knowledge of web design.
-Currently working to make it mobile friendly. Media queries have been 
-implemented but on newer mobile devices still displays incorrectly.
-No tablet or panoramic media queries. 
+(Netlify)Profile - Profile page of links to LinkedIn, GitHub, and HackerRank; React Project, Replit Python adventure story, and Trinket.io coding platform for Turtle art; and Videos that are not related to coding just one of my fun hobbies. All links should be functional and useable upon loading content.
+
+The page was intended to be fun and different. I still tried to respect any that might not want this style and there are anchors useable in the top-navbar to speed through the page if desired. Everything shold be chosen by the user and can be cancelled at anytime.
+
+KNOWN BUGS -
+1) improper scaling on zoom in / zoom out in the browser settings (ctrl + mousewheel)
+2) still need to add better css for tablet media queries
+
+
 https://keith-jackson-portfolio.netlify.app/
 # Web-Pages
 

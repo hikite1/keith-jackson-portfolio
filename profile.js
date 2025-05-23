@@ -62,49 +62,59 @@ function handleNotAButtonClick() {
   rebootCountdownEl.style.display = 'block';
   rebootCountdownEl.textContent = '';
 
-  // Step 1: "Oh no!" countdown
   messageEl.innerHTML = "Oh no! You have deleted all files. Self-destruct begins in...";
   let count = 5;
   countdownEl.textContent = count;
-  
-  const selfDestructInterval = setInterval(() => {
+
+  // Store interval and timeout references
+  let selfDestructInterval, haTimeout, clearTimeout1, rebootInterval;
+
+  function cleanup() {
+    clearInterval(selfDestructInterval);
+    clearTimeout(haTimeout);
+    clearTimeout(clearTimeout1);
+    clearInterval(rebootInterval);
+    messageEl.innerHTML = '';
+    countdownEl.style.display = 'none';
+    rebootCountdownEl.style.display = 'none';
+    container.style.display = 'none';
+  }
+
+  // Add click event to cancel everything
+  container.onclick = cleanup;
+
+  selfDestructInterval = setInterval(() => {
     count--;
     countdownEl.textContent = count;
 
     if (count <= 0) {
-      countdownEl.style.display = 'none'; // Hide the countdown element
+      countdownEl.style.display = 'none';
       clearInterval(selfDestructInterval);
 
-      // Step 2: Clear text
       messageEl.innerHTML = '';
 
-      // Step 3: Ha ha message
-      setTimeout(() => {
+      haTimeout = setTimeout(() => {
         messageEl.innerHTML = 'Ha ha! <strong>Just kidding. That isn’t a button.</strong>';
 
-        // Step 4: Clear text again
-        setTimeout(() => {
+        clearTimeout1 = setTimeout(() => {
           messageEl.innerHTML = '';
 
-          // Step 5: Rebooting countdown
           let rebootCount = 3;
           rebootCountdownEl.textContent = `Rebooting in... ${rebootCount}`;
 
-          const rebootInterval = setInterval(() => {
+          rebootInterval = setInterval(() => {
             rebootCount--;
             if (rebootCount > 0) {
               rebootCountdownEl.textContent = `Rebooting in... ${rebootCount}`;
             } else {
               clearInterval(rebootInterval);
-
-              // Step 6: Reboot complete
               rebootCountdownEl.textContent = '';
-              rebootCountdownEl.style.display = 'none'; // Hide the reboot countdown element
+              rebootCountdownEl.style.display = 'none';
               container.style.display = 'none';
             }
           }, 1000);
-        }, 2000); // Wait 2s after Ha ha message
-      }, 1000); // Wait 1s after countdown
+        }, 2000);
+      }, 1000);
     }
   }, 1000);
 }
