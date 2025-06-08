@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Keith Jackson's Profile Page</title>
   <link rel="stylesheet" href="profile.css" />
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
@@ -51,7 +51,7 @@
         <option value="mp3/We_Care_Alot.mp3">We Care a Lot Cover</option>
         <option value="mp3/Brass_Against_Mother_Danzig_cover_ft_Liza_Colby.mp3">Mother Cover by Brass Against</option>
       </select>
-      <audio id="audio-player" controls loop style="width: 100%; margin-top: 1rem;">
+      <audio id="audio-player" controls loop style="margin-top: 1rem;">
         <source src="mp3/Matisyahu - One Day (YouTube Version)_256k.mp3" type="audio/mpeg">
         Your browser does not support HTML5 audio.
       </audio>
@@ -73,23 +73,25 @@
         </h3>
         <div id="linkedin-preview" class="linkedin-preview"></div>
       </div>
+
+      <div class="text-wrapper2-github">
+        <img src="images/github_thumbnail.png" alt="GitHub Thumbnail">
+        <h3>
+          <strong>My <a href="https://github.com/hikite1" id="github-link"><span style='color: black;'>Git</span><span style='color: white;'>Hub</span></a></strong>
+        </h3>
+        <div id="github-preview" class="github-preview"></div>
+      </div>
+
+      <div class="text-wrapper2-hackerrank">
+        <img src="images/hacker_thumbnail.jpg" alt="HackerRank Thumbnail">
+        <h3>
+          <strong>My <a href="https://www.hackerrank.com/hikite1" id="hackerrank-link"><span style='color: #066b24;'>HackerRank</span></a></strong>
+        </h3>
+        <div id="hackerrank-preview" class="hackerrank-preview"></div>
+      </div>
     </div>
 
-    <div class="text-wrapper2-github">
-      <img src="images/github_thumbnail.png" alt="GitHub Thumbnail">
-      <h3>
-        <strong>My <a href="https://github.com/hikite1" id="github-link"><span style='color: black;'>Git</span><span style='color: white;'>Hub</span></a></strong>
-      </h3>
-      <div id="github-preview" class="github-preview"></div>
-    </div>
-
-    <div class="text-wrapper2-hackerrank">
-      <img src="images/hacker_thumbnail.jpg" alt="HackerRank Thumbnail">
-      <h3>
-        <strong>My <a href="https://www.hackerrank.com/hikite1" id="hackerrank-link"><span style='color: #066b24;'>HackerRank</span></a></strong>
-      </h3>
-      <div id="hackerrank-preview" class="hackerrank-preview"></div>
-    </div>
+    
 
     <div class="chainborder2" id="projects">
       <img src="images/chainFrame.png" alt="Chain Frame" />
@@ -99,66 +101,68 @@
       </div>
     </div>
 
-    <div class="navbar">
-      <div class="dropdown">
-        <button class="dropbtn">
-          <h3>
-            <span class="logo-text">🄶🄰🄼🄴🅂</span><br>
-            <strong><span class="hover-black">My</span>
-              <span style="color: #b83789;">Games</span></strong>
-          </h3>
-        </button>
-        <div class="dropdown-content">
-          <a href="https://acereraknroll.netlify.app/signin">AcererakNRoll</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="navbar2">
-      <div class="dropdown2">
-        <button class="dropbtn2">
-          <div style="display: flex; flex-direction: column;">
-            <img src="images/replit_thumbnail.png" alt="Replit Thumbnail">
-            <div style="display: flex;">
-              <span class="hover-black">My</span>
-              <span style='color: rgb(222, 116, 60); text-decoration: underline;'>Replit</span>
-            </div>
+    <div class="parent-container" style="position: relative;">
+      <div class="navbar">
+        <div class="dropdown">
+          <button class="dropbtn">
+            <h3>
+              <span class="logo-text">🄶🄰🄼🄴🅂</span><br>
+              <strong><span class="hover-black">My</span>
+                <span style="color: #b83789;">Games</span></strong>
+            </h3>
+          </button>
+          <div class="dropdown-content">
+            <a href="https://acereraknroll.netlify.app/signin">AcererakNRoll</a>
           </div>
-        </button>
-        <div class="dropdown2-content2">
-          <a href="https://replit.com/@hikite1/Adventure-Story" class="tooltip-link">
-            Adventure Story
-            <span class="tooltip-text">
-              Mobile users: For best experience, download Replit app (hikite1/Adventure-Story)
-            </span>
-          </a>
         </div>
       </div>
-    </div>
 
-    <div class="navbar3">
-      <div class="dropdown3">
-        <button class="dropbtn3">
-          <div style="display: flex; flex-direction: column;">
-            <img src="images/trinket_thumbnail.png" alt="Trinket Thumbnail">
-            <div style="display: flex;">
-              <span class="hover-black">My&nbsp;</span>
-              <span style="text-decoration: underline;">
-                <span style="color: yellow;">Tri</span><span style="color: blue;">nk</span><span style="color: green;">et</span>
+      <div class="navbar2">
+        <div class="dropdown2">
+          <button class="dropbtn2">
+            <div style="display: flex; flex-direction: column;">
+              <img src="images/replit_thumbnail.png" alt="Replit Thumbnail">
+              <div style="display: flex;">
+                <span class="hover-black">My</span>
+                <span style='color: rgb(222, 116, 60); text-decoration: underline;'>Replit</span>
+              </div>
+            </div>
+          </button>
+          <div class="dropdown2-content2">
+            <a href="https://replit.com/@hikite1/Adventure-Story" class="tooltip-link">
+              Adventure Story
+              <span class="tooltip-text">
+                Mobile users: For best experience, download Replit app (hikite1/Adventure-Story)
               </span>
-            </div>
+            </a>
           </div>
-        </button>
-        <div class="dropdown3-content3">
-          <a href="https://trinket.io/python/a020bb6bbc1c" class="tooltip-link">
-            Bridge Art
-          </a>
-          <a href="https://trinket.io/python/a90e60a66ffd" class="tooltip-link">
-            Random Polygons
-          </a>
-          <a href="https://trinket.io/python/c82fa6830433" class="tooltip-link">
-            Recursive Fractal Tree Art
-          </a>
+        </div>
+      </div>
+
+      <div class="navbar3">
+        <div class="dropdown3">
+          <button class="dropbtn3">
+            <div style="display: flex; flex-direction: column;">
+              <img src="images/trinket_thumbnail.png" alt="Trinket Thumbnail">
+              <div style="display: flex;">
+                <span class="hover-black">My&nbsp;</span>
+                <span style="text-decoration: underline;">
+                  <span style="color: yellow;">Tri</span><span style="color: blue;">nk</span><span style="color: green;">et</span>
+                </span>
+              </div>
+            </div>
+          </button>
+          <div class="dropdown3-content3">
+            <a href="https://trinket.io/python/a020bb6bbc1c" class="tooltip-link">
+              Bridge Art
+            </a>
+            <a href="https://trinket.io/python/a90e60a66ffd" class="tooltip-link">
+              Random Polygons
+            </a>
+            <a href="https://trinket.io/python/c82fa6830433" class="tooltip-link">
+              Recursive Fractal Tree Art
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -172,12 +176,14 @@
       </div>
     </div>
 
-    <div class="google-drive">
-      <img src="images/googleDrive_thumbnail.png" alt="Google Drive Thumbnail">
-      <a href="https://drive.google.com/drive/folders/1gzMGkt8KnwCWCKhSsZcIb9iN5p8Ow69n?usp=drive_link">
-        Google Drive Videos
-      </a>
-    </div>
+    <div class="parent-container" style="position: relative;">
+      <div class="google-drive">
+        <img src="images/googleDrive_thumbnail.png" alt="Google Drive Thumbnail">
+        <a href="https://drive.google.com/drive/folders/1gzMGkt8KnwCWCKhSsZcIb9iN5p8Ow69n?usp=drive_link">
+          Google Drive Videos
+        </a>
+      </div>
+    </div>  
 
     <div class="youtube-container">
       <iframe

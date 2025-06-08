@@ -2,7 +2,6 @@
 
 html {
   box-sizing: border-box;
-  overflow-x: hidden;
   touch-action: manipulation;
   width: 100%;
   background-color: black;
@@ -18,12 +17,14 @@ html {
 body {
   margin: 0;
   padding: 0;
+  position: relative;
+  max-width: 100vw;
   overflow-x: hidden;
   overscroll-behavior-x: none;
 }
 
 /** {
-  outline: 1px solid red; //debug container size
+  outline: 1px solid red; 
 }*/
 
 .no-select {
@@ -52,7 +53,7 @@ body {
 }
 
 .top-navbar {
-  position: fixed;
+  position: relative ;
   top: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.7);
@@ -164,24 +165,22 @@ body {
 .jumbotron {
   display: flex;
   flex-direction: column;
-  margin-left: .5rem;
   align-items: center;
   text-align: center;
-  width: 96%;
+  width: 100%;
   height: auto;
   padding: 2rem 1rem;
-  position: relative;
 }
 
 .jumbotron img {
-  border-radius: 8px;
-  width: 98%;
-  height: 20vh;
+  width: 85%;
+  height: auto;
+  max-height: 400px;
 }
 
 .jumbotron .hover-text {
   position: absolute;
-  bottom: 10;
+  top: 4rem;
   left: 0;
   width: 100%;
   color: #A2DCE7;
@@ -198,7 +197,7 @@ body {
 
 .profile {
   text-align: center;
-  overflow: hidden;
+  overflow-x: hidden;
   padding: 0 7vw;
 }
 
@@ -212,12 +211,20 @@ body {
 
 @keyframes move {
   0% { transform: translateX(-25vw); }
-  50% { transform: translateX(28vw); }
+  50% { transform: translateX(25vw); }
   100% { transform: translateX(-25vw); }
 }
 
-.audio-player audio {
+.audio-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
+  box-sizing: border-box;
+}
+
+.audio-player audio {
+  width: 80%;
   height: 40px;
   color: #00ffff;
   font-family: Arial, sans-serif;
@@ -237,7 +244,7 @@ body {
 }
 
 #song-selector {
-  width: 100%;
+  width: 80%;
   font-size: 1.2rem;
   color: #00ffff;
   background-color: black;
@@ -264,8 +271,7 @@ body {
 
 .chainborder, .chainborder2, .chainborder3 {
   position: relative;
-  max-width: 90vw;
-  margin: 2rem auto;
+  width: 100%;
 }
 
 .chainborder img,
@@ -299,12 +305,17 @@ body {
   color: #A2DCE7;
   font-family: 'Sedgwick Ave Display', cursive;
   text-align: center;
-  white-space: nowrap;
+  white-space: normal;
+  word-break: break-word;
   z-index: 1;
 }
 
-.text-wrapper2-linkedin, .text-wrapper2-github, .text-wrapper2-hackerrank,
-.navbar, .navbar2, .navbar3, .google-drive {
+.parent-container {
+  position: relative;
+  width: 100%;
+}
+
+.text-wrapper2-linkedin, .text-wrapper2-github, .text-wrapper2-hackerrank {
   font-size: clamp(1.35rem, 4.5vw, 1.8rem);
   text-decoration: none;
   color: #00ffff;
@@ -315,6 +326,20 @@ body {
   text-align: center;
   transition: background-color 0.3s, color 0.3s;
   max-width: 90%;
+}
+
+.navbar, .navbar2, .navbar3, .google-drive {
+  font-size: clamp(1.35rem, 4.5vw, 1.8rem);
+  text-decoration: none;
+  color: #00ffff;
+  padding: 0.5rem 1rem;
+  border: 1px solid #00ffff;
+  border-radius: 4px;
+  margin: 0.5rem auto;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+  max-width: 350px;
+  width: 85%;
 }
 
 .text-wrapper2-linkedin h3 a:hover, .text-wrapper2-github h3 a:hover, .text-wrapper2-hackerrank h3 a:hover {
@@ -384,59 +409,54 @@ body {
 }
 
 .dropbtn, .dropbtn2, .dropbtn3 {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem;
-    width: 100%;
-    border: none;
-    background: none;
-    cursor: pointer;
-    text-align: center;
-  }
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  width: 85%;
+  margin: 0 auto;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: center;
+}
 
-  .dropbtn h3, .dropbtn2 span, .dropbtn3 span {
-    margin: 0.5rem 0;
-    font-size: 2.4rem;
-    font-weight: bold;
-    white-space: nowrap;
-    text-align: center;
-  }
+.dropbtn h3, .dropbtn2 span, .dropbtn3 span {
+  margin: 0.5rem 0;
+  font-size: 2.4rem;
+  font-weight: bold;
+  white-space: nowrap;
+  text-align: center;
+}
 
-  .dropbtn h3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.dropbtn h3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .dropbtn2 > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.dropbtn2 img {
+  max-width: 100px;
+  height: auto;
+  display: block;
+  margin-bottom: 0.5rem;
+}
 
-  .dropbtn2 img {
-    max-width: 100px;
-    height: auto;
-    display: block;
-    margin-bottom: 0.5rem;
-  }
+.dropbtn3 img {
+  width: 125px;
+  height: auto;
+  display: block;
+  margin-bottom: 0.5rem;
+  margin: auto;
+}
 
-  .dropbtn3 img {
-    width: 125px;
-    height: auto;
-    display: block;
-    margin-bottom: 0.5rem;
-    margin: auto;
-  }
-
-  .dropbtn2 div:last-child {
-    display: flex;
-    gap: 0.5rem;
-    justify-content: center;
-  }
+.dropbtn2 div:last-child {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
 
 .dropbtn h3 .logo-text {
   font-size: 3rem;
@@ -511,7 +531,7 @@ iframe {
 }
 
 .youtube-container {
-  width: 98%;
+  width: 100%;
   max-width: 560px;
   padding: 1rem;
   box-sizing: border-box;
@@ -865,12 +885,6 @@ iframe {
     box-sizing: inherit;
   }
 
-  body {
-    margin: 0;
-    padding: 0;
-    overscroll-behavior-x: none;
-  }
-
   .background-video,
   #background-video {
     position: fixed;
@@ -906,20 +920,15 @@ iframe {
   }
 
   .jumbotron {
-    display: flex;
-    flex-direction: column;
-    margin-left: .5rem;
-    align-items: center;
-    text-align: center;
-    width: 98%;
-    padding: 2rem 1rem;
-    position: relative;
+    max-width: 80rem;
+    margin: 2rem auto;
+    width: 100%;
   }
 
   .jumbotron img {
-    border-radius: 8px;
     width: 80%;
-    height: 50vh;
+    height: auto;
+    max-height: 25rem;
   }
 
   .profile {
@@ -929,7 +938,7 @@ iframe {
   }
 
   .profile #moving-image {
-    width: 50vw;
+    width: 150px;
     max-width: 150px;
     height: auto;
     border-radius: 50%;
@@ -937,13 +946,23 @@ iframe {
   }
 
   @keyframes move {
-    0% { transform: translateX(-350%); } 
-    50% { transform: translateX(42vw); }
-    100% { transform: translateX(-350%); } 
+    0% { transform: translateX(-400px); }   /* Fixed pixel movement */
+    50% { transform: translateX(400px); }
+    100% { transform: translateX(-400px); }
+  }
+
+  .audio-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;   
+    margin: 0 auto;      
+    box-sizing: border-box;
   }
 
   .audio-player audio {
-    width: 100%;
+    width: 80%;
     height: 40px;
     color: #00ffff;
     font-family: Arial, sans-serif;
@@ -963,7 +982,7 @@ iframe {
   }
 
   #song-selector {
-    width: 100%;
+    width: 80%;
     font-size: 1.2rem;
     color: #00ffff;
     background-color: black;
@@ -990,15 +1009,16 @@ iframe {
 
   .chainborder, .chainborder2, .chainborder3 {
     position: relative;
-    max-width: 90vw;
-    margin: 2rem auto;
+    max-width: 1000px;
+    max-height: auto;   
+    margin: 0 auto;
   }
 
   .chainborder img,
   .chainborder2 img,
   .chainborder3 img {
     width: 100%;
-    height: 90vh;
+    height: auto;
     display: block;
   }
 
@@ -1017,7 +1037,7 @@ iframe {
   }
 
   .text-wrapper2-linkedin, .text-wrapper2-github, .text-wrapper2-hackerrank,
-  .navbar, .navbar2, .google-drive {
+  .navbar, .navbar2, .navbar3, .google-drive {
     font-size: clamp(1.35rem, 4.5vw, 1.8rem);
     text-decoration: none;
     color: #00ffff;
@@ -1027,7 +1047,7 @@ iframe {
     margin: 0.5rem auto;
     text-align: center;
     transition: background-color 0.3s, color 0.3s;
-    max-width: 90%;
+    max-width: 1000px;
   }
 
   .text-wrapper2-linkedin:hover,
@@ -1047,13 +1067,13 @@ iframe {
   .text-wrapper2-hackerrank img,
   .dropbtn2 img, .google-drive img {
     margin: 0 auto 0.5rem;
-    width: 25vw;
+    width: 200px;
     flex-shrink: 0;
   }
 
   .text-wrapper2-github img {
     margin: 0 auto;
-    width: 40vw;
+    width: 400px;
     flex-shrink: 0;
   }
 
@@ -1084,13 +1104,15 @@ iframe {
     display: block;
   }
 
-  .dropbtn, .dropbtn2 {
+  .dropbtn, .dropbtn2, .dropbtn3 {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 0.5rem;
-    width: 100%;
+    width: 85%;
+    margin: 0 auto;
     border: none;
     background: none;
     cursor: pointer;
@@ -1163,7 +1185,7 @@ iframe {
     max-width: 1200px; 
     width: 98%;
     height: auto;
-    margin: 8vh;
+    margin: 0 auto;
     padding: 1rem;
     box-sizing: border-box;
   }
