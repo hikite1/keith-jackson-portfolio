@@ -536,6 +536,7 @@ iframe {
   padding: 1rem;
   box-sizing: border-box;
   position: relative;
+  margin: 0 auto;
 }
 
 .youtube-container iframe {
@@ -689,10 +690,9 @@ iframe {
   }
 
   .youtube-container {
-    max-width: 960px; 
+    max-width: 850px !important; 
     width: 90%;
     height: auto;
-    padding: 1rem;
     box-sizing: border-box;
   }
 
