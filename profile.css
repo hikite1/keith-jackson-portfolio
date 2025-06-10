@@ -691,11 +691,11 @@ iframe {
   }
 
   .youtube-container {
-    max-width: 750px !important; 
+    max-width: 725px !important; 
     width: 90%;
     height: auto;
     margin: 0 auto;
-    left: 65px !important;
+    left: 72px !important;
     box-sizing: border-box;
   }
 
