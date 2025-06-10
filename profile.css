@@ -102,7 +102,7 @@ body {
   transform: translateX(-50%); 
   color: #00ffff;
   padding: 8px 14px;
-  font-size: 5vw; 
+  font-size: clamp(1.2rem, 5vw, 2.5rem); 
   font-weight: bold;
   animation: bounce 1.8s infinite;
   transition: opacity 0.4s ease;
@@ -537,7 +537,8 @@ iframe {
   padding: 1rem;
   box-sizing: border-box;
   position: relative;
-  margin: 0 0 0 3.5vw;
+  margin: 0 auto;
+  left: 1vw; 
 }
 
 .youtube-container iframe {
@@ -693,7 +694,8 @@ iframe {
     max-width: 750px !important; 
     width: 90%;
     height: auto;
-    margin: 0 0 0 10vw !important;
+    margin: 0 auto;
+    left: 65px !important;
     box-sizing: border-box;
   }
 
@@ -945,7 +947,7 @@ iframe {
     transform: translateX(-50%); 
     color: #00ffff;
     padding: 8px 14px;
-    font-size: 2vw; 
+    font-size: clamp(1.2rem, 5vw, 2.5rem); 
     font-weight: bold;
     animation: bounce 1.8s infinite;
     transition: opacity 0.4s ease;
@@ -1218,7 +1220,8 @@ iframe {
     max-width: 1050px;
     width: 98%;
     height: auto;
-    margin: 0 0 0 9vw;   /* top right bottom left */
+    margin: 0 auto;
+    left: 10px;
     padding: 1rem;
     box-sizing: border-box;
   }
