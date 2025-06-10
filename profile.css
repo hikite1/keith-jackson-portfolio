@@ -602,6 +602,19 @@ iframe {
     max-height: 300px;
   }
 
+  .jumbotron .hover-text {
+    position: absolute;
+    top: 5rem !important;
+    left: 0;
+    width: 100%;
+    color: #A2DCE7;
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: clamp(1.5rem, 7.5vw, 2.25rem);
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
   .scroll-prompt {
     position: absolute; 
     top: 8vh; 
@@ -715,112 +728,127 @@ iframe {
 /* APPLE MEDIA QUERIES FOR LANDSCAPE */
 @media screen and (orientation: landscape) and (max-width: 812px) {
 
-  .jumbotron {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    padding: 2rem 1rem;
-    position: relative;
-  }
-
   .jumbotron img {
-    border-radius: 8px;
-    margin-left: -1rem;
+    max-width: 80% !important;
+    height: auto;
+    max-height: 300px;
+    margin: 0 auto;
   }
 
-  @keyframes move {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(65vw); }
-    100% { transform: translateX(0); }
+  .jumbotron .hover-text {
+    position: absolute;
+    top: 8rem;
+    left: 0;
+    width: 100%;
+    color: #A2DCE7;
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: clamp(1.5rem, 7.5vw, 2.25rem);
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  .scroll-prompt {
+    position: absolute; 
+    top: 8vh; 
+    left: 50%;
+    transform: translateX(-50%); 
+    color: #00ffff;
+    padding: 8px 14px;
+    font-size: 3vw; 
+    font-weight: bold;
+    animation: bounce 1.8s infinite;
+    transition: opacity 0.4s ease;
+    z-index: 9999;
+  }
+
+  .profile {
+    text-align: center;
+    overflow: hidden;
+    padding: 0 7vw;
+  }
+
+  .profile #moving-image {
+    width: 40vw;
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+    animation: move-landscape 10s infinite ease-in-out;
+  }
+
+  @keyframes move-landscape {
+    0% { transform: translateX(-30vw); }
+    50% { transform: translateX(30vw); }
+    100% { transform: translateX(-30vw); }
+  }
+
+  .hidden-video video {
+    max-width: 90%;
+    max-height: 40%;
+    margin-top: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #ff6600;
+  }
+
+  .chainborder, .chainborder2, .chainborder3 {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
   }
 
   .chainborder img,
   .chainborder2 img,
   .chainborder3 img {
     width: 100%;
-    height: 400px;
+    height: 600px !important;
     display: block;
   }
 
+  .text-wrapper2-linkedin, .text-wrapper2-github, .text-wrapper2-hackerrank {
+    font-size: clamp(1.35rem, 4.5vw, 1.8rem);
+    text-decoration: none;
+    color: #00ffff;
+    padding: 0.5rem 1rem;
+    border: 1px solid #00ffff;
+    border-radius: 4px;
+    margin: 0.5rem auto;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+    max-width: 75%;
+  }
+
+  .navbar, .navbar2, .navbar3, .google-drive {
+    font-size: clamp(1.35rem, 4.5vw, 1.8rem);
+    text-decoration: none;
+    color: #00ffff;
+    padding: 0.5rem 1rem;
+    border: 1px solid #00ffff;
+    border-radius: 4px;
+    margin: 0.5rem auto;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+    max-width: 75%;
+  }
+
+  .text-wrapper2-github img {
+    margin: 0 auto 0.5rem;
+    width: 40vw;
+    flex-shrink: 0;
+  }
+
   .youtube-container {
-    max-width: 960px; 
-    width: 96%;
+    max-width: 550px !important; 
+    width: 90%;
     height: auto;
-    margin: 1.75rem;
-    padding: 1rem;
+    margin: 0 auto;
+    left: 5px !important;
     box-sizing: border-box;
   }
 
   .youtube-container iframe {
-    width: 100%; 
-    aspect-ratio: 16 / 9;
-    border-radius: 8px;
-    display: block;
-  }
-
-} 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ANDROID TABLET MEDIA QUERIES */
-@media screen and (min-width: 768px) {
-  .jumbotron {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    padding: 2rem 1rem;
-    position: relative;
-  }
-
-  .jumbotron img {
-    border-radius: 8px;
-    margin-left: -1rem;
     width: 98%;
-  }
-
-  @keyframes move {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(65vw); }
-    100% { transform: translateX(0); }
-  }
-
-  .chainborder img,
-  .chainborder2 img,
-  .chainborder3 img {
-    width: 100%;
-    height: 400px;
-    display: block;
-  }
-
-  .youtube-container {
-    max-width: 960px; 
-    width: 96%;
-    height: auto;
-    margin: 1.75rem;
-    padding: 1rem;
-    box-sizing: border-box;
-  }
-
-  .youtube-container iframe {
-    width: 100%;
     aspect-ratio: 16 / 9;
     border-radius: 8px;
-    display: block;
   }
 
 }
@@ -834,62 +862,131 @@ iframe {
 
 
 
-
-
-
-
-
-
-/* ANDROID TABLET MEDIA QUERIES */
+/* TABLET MEDIA QUERIES */
 @media screen and (min-width: 768px) {
-  .jumbotron {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    padding: 2rem 1rem;
-    position: relative;
-  }
-
   .jumbotron img {
-    border-radius: 8px;
-    margin-left: -1rem;
-    width: 98%;
+    max-width: 75%;
+    height: auto;
+    max-height: 300px;
   }
 
-  @keyframes move {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(65vw); }
-    100% { transform: translateX(0); }
+  .jumbotron .hover-text {
+    position: absolute;
+    top: 8rem;
+    left: 0;
+    width: 100%;
+    color: #A2DCE7;
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: clamp(1.5rem, 7.5vw, 2.25rem);
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  .scroll-prompt {
+    position: absolute; 
+    top: 8vh; 
+    left: 50%;
+    transform: translateX(-50%); 
+    color: #00ffff;
+    padding: 8px 14px;
+    font-size: 3vw; 
+    font-weight: bold;
+    animation: bounce 1.8s infinite;
+    transition: opacity 0.4s ease;
+    z-index: 9999;
+  }
+
+  .profile {
+    text-align: center;
+    overflow: hidden;
+    padding: 0 7vw;
+  }
+
+  .profile #moving-image {
+    width: 40vw;
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+    animation: move-landscape 10s infinite ease-in-out;
+  }
+
+  @keyframes move-landscape {
+    0% { transform: translateX(-30vw); }
+    50% { transform: translateX(30vw); }
+    100% { transform: translateX(-30vw); }
+  }
+
+  .hidden-video video {
+    max-width: 90%;
+    max-height: 40%;
+    margin-top: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #ff6600;
+  }
+
+  .chainborder, .chainborder2, .chainborder3 {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
   }
 
   .chainborder img,
   .chainborder2 img,
   .chainborder3 img {
     width: 100%;
-    height: 400px;
+    height: 600px !important;
     display: block;
   }
 
+  .text-wrapper2-linkedin, .text-wrapper2-github, .text-wrapper2-hackerrank {
+    font-size: clamp(1.35rem, 4.5vw, 1.8rem);
+    text-decoration: none;
+    color: #00ffff;
+    padding: 0.5rem 1rem;
+    border: 1px solid #00ffff;
+    border-radius: 4px;
+    margin: 0.5rem auto;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+    max-width: 75%;
+  }
+
+  .navbar, .navbar2, .navbar3, .google-drive {
+    font-size: clamp(1.35rem, 4.5vw, 1.8rem);
+    text-decoration: none;
+    color: #00ffff;
+    padding: 0.5rem 1rem;
+    border: 1px solid #00ffff;
+    border-radius: 4px;
+    margin: 0.5rem auto;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+    max-width: 75%;
+  }
+
+  .text-wrapper2-github img {
+    margin: 0 auto 0.5rem;
+    width: 40vw;
+    flex-shrink: 0;
+  }
+
   .youtube-container {
-    max-width: 960px; 
-    width: 96%;
+    max-width: 600px !important; 
+    width: 90%;
     height: auto;
-    margin: 1.75rem;
-    padding: 1rem;
+    margin: 0 auto;
+    left: 10px !important;
     box-sizing: border-box;
   }
 
   .youtube-container iframe {
-    width: 100%; 
+    width: 98%;
     aspect-ratio: 16 / 9;
     border-radius: 8px;
-    display: block;
   }
 
 }
-
 
 
 
@@ -964,6 +1061,19 @@ iframe {
     width: 80%;
     height: auto;
     max-height: 25rem;
+  }
+
+  .jumbotron .hover-text {
+    position: absolute;
+    top: 8rem;
+    left: 0;
+    width: 100%;
+    color: #A2DCE7;
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: clamp(1.5rem, 7.5vw, 2.25rem);
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.5s;
   }
 
   .profile {
