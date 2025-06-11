@@ -214,6 +214,16 @@
 
     <script>
       document.addEventListener('DOMContentLoaded', function () {
+        var audioPlayer = document.getElementById('audio-player');
+        var songSelector = document.getElementById('song-selector');
+        if (audioPlayer && songSelector) {
+          audioPlayer.src = songSelector.value;
+        }
+      });
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
         scrollFunction ();
       })
     </script>

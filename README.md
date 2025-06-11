@@ -6,8 +6,7 @@
 The page was intended to be fun and different. I still tried to respect any that might not want this style and there are anchors useable in the top-navbar to speed through the page if desired. Everything shold be chosen by the user and can be cancelled at anytime.
 
 KNOWN BUGS -
-1) improper scaling on zoom in / zoom out in the browser settings (ctrl + mousewheel)
-2) still need to add better css for tablet media queries
+
 
 
 https://keith-jackson-portfolio.netlify.app/

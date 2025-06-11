@@ -1327,7 +1327,7 @@ iframe {
   }
 
   .youtube-container {
-    max-width: 1050px;
+    max-width: 1050px !important;
     width: 98%;
     height: auto;
     margin: 0 auto;
