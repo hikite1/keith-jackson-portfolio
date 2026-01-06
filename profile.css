@@ -784,6 +784,10 @@ body.ios .chainborder2 img {
   display: block;
 }
 
+.text-wrapper3 {
+  font-size: clamp(1.3rem, 7.3vw, 2.23rem);
+}
+
 body.ios .chainborder3 img {
   width: 100%;
   height: 90vh;
