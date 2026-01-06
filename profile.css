@@ -716,6 +716,10 @@ iframe {
     max-width: 75%;
   }
 
+  .mobile-break {
+    display: none;
+  }
+
   .text-wrapper2-github img {
     margin: 0 auto 0.5rem;
     width: 40vw;
@@ -752,7 +756,20 @@ iframe {
 
 
 /* APPLE MEDIA QUERIES */
+body.ios .audio-player {
+  max-width: 400px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
 
+body.ios .audio-player audio,
+body.ios #song-selector {
+  width: 90%;
+  margin: 0 auto;
+}
 
 
 
