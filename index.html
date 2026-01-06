@@ -238,7 +238,7 @@
       window.addEventListener('load', function() {
         setTimeout(function() {
           window.scrollTo(0, 0);
-        }, 10); // slight delay helps on mobile
+        }, 10); 
       });
     </script>
 
@@ -268,6 +268,14 @@
 
     <script src="profile.js"></script>
 
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+      if (iOS) {
+        document.body.classList.add('ios');
+      }
+    });
+    </script>
   </div>
 </body>
 </html>

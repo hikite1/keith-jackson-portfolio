@@ -12,14 +12,6 @@ function changeSong() {
   }
 
 
-
-
-
-
-
-
-
-
 function scrollFunction() {
     window.addEventListener('scroll', () => {
         const prompt = document.getElementById('scrollPrompt');

@@ -703,7 +703,7 @@ iframe {
     max-width: 75%;
   }
 
-  .navbar, .navbar2, .navbar3, .google-drive {
+  .navbar, .navbar2, .navbar3, .navbar4, .google-drive {
     font-size: clamp(1.35rem, 4.5vw, 1.8rem);
     text-decoration: none;
     color: #00ffff;
@@ -738,6 +738,27 @@ iframe {
   }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* APPLE MEDIA QUERIES */
+
+
+
+
+
+
+
 
 
 
