@@ -773,6 +773,10 @@ body.ios #song-selector {
   margin-right: auto;
 }
 
+body.ios .audio-player label {
+  text-align: center;
+}
+
 
 
 
