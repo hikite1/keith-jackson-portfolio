@@ -757,18 +757,27 @@ iframe {
 
 /* APPLE MEDIA QUERIES */
 body.ios .audio-player {
-  max-width: 400px;
-  margin: 0 auto;
-  align-items: center;
-  justify-content: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+body.ios .audio-player label {
+  width: 100%;
+  text-align: center;
 }
 
 body.ios .audio-player audio,
 body.ios #song-selector {
-  width: 90%;
+  width: 100%;
+  max-width: 350px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 
