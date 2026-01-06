@@ -269,11 +269,11 @@
     <script src="profile.js"></script>
 
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-      if (iOS) {
-        document.body.classList.add('ios');
-      }
+    document.addEventListener('DOMContentLoaded', () => {
+      const isApple = /iPhone|iPod/.test(navigator.userAgent)
+        || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+
+      if (isApple) document.body.classList.add('ios');
     });
     </script>
   </div>
