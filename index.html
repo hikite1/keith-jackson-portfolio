@@ -235,6 +235,14 @@
     </div>
 
     <script>
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          window.scrollTo(0, 0);
+        }, 10); // slight delay helps on mobile
+      });
+    </script>
+
+    <script>
       document.addEventListener('DOMContentLoaded', function () {
         var audioPlayer = document.getElementById('audio-player');
         var songSelector = document.getElementById('song-selector');

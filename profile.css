@@ -107,7 +107,6 @@ body {
   animation: bounce 1.8s infinite;
   transition: opacity 0.4s ease;
   z-index: 9999;
-  pointer-events: none;
 }
 
 @keyframes bounce {
