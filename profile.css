@@ -329,7 +329,7 @@ body {
   max-width: 90%;
 }
 
-.navbar, .navbar2, .navbar3, .google-drive {
+.navbar, .navbar2, .navbar3, .navbar4, .google-drive {
   font-size: clamp(1.35rem, 4.5vw, 1.8rem);
   text-decoration: none;
   color: #00ffff;
@@ -352,7 +352,7 @@ body {
 .text-wrapper2-github:hover,
 .text-wrapper2-hackerrank:hover,
 .navbar:hover,
-.navbar2:hover, .navbar3:hover, .google-drive:hover {
+.navbar2:hover, .navbar3:hover, .navbar4:hover, .google-drive:hover {
   background-color: #00ffff;
   color: black;
 }
@@ -371,7 +371,7 @@ body {
   flex-shrink: 0;
 }
 
-.dropdown-content, .dropdown2-content2, .dropdown3-content3 {
+.dropdown-content, .dropdown2-content2, .dropdown3-content3, .dropdown4-content4 {
   display: none;
   position: relative;
   background-color: #111;
@@ -383,7 +383,7 @@ body {
 }
 
 .dropdown-content a,
-.dropdown2-content2 a, .dropdown3-content3 a {
+.dropdown2-content2 a, .dropdown3-content3 a, .dropdown4-content4 a {
   color: white;
   padding: 0.75rem 1rem;
   text-decoration: none;
@@ -393,7 +393,7 @@ body {
 }
 
 .dropdown:hover .dropdown-content,
-.dropdown2:hover .dropdown2-content2, .dropdown3:hover .dropdown3-content3 {
+.dropdown2:hover .dropdown2-content2, .dropdown3:hover .dropdown3-content3, .dropdown4:hover .dropdown4-content4 {
   display: block;
 }
 
@@ -409,7 +409,11 @@ body {
   color: yellow;
 }
 
-.dropbtn, .dropbtn2, .dropbtn3 {
+.dropdown4:hover .dropdown4-content4 a:hover {
+  color: #fcb900;
+}
+
+.dropbtn, .dropbtn2, .dropbtn3, .dropbtn4 {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -424,7 +428,7 @@ body {
   text-align: center;
 }
 
-.dropbtn h3, .dropbtn2 span, .dropbtn3 span {
+.dropbtn h3, .dropbtn2 span, .dropbtn3 span, .dropbtn4 span {
   margin: 0.5rem 0;
   font-size: 2.4rem;
   font-weight: bold;
@@ -453,6 +457,14 @@ body {
   margin: auto;
 }
 
+.dropbtn4 img {
+  width: 200px;
+  height: 150px;
+  display: block;
+  margin-bottom: 0.5rem;
+  margin: auto;
+}
+
 .dropbtn2 div:last-child {
   display: flex;
   gap: 0.5rem;
@@ -470,9 +482,16 @@ body {
 }
 
 .navbar:hover .hover-black,
-.navbar2:hover .hover-black, .navbar3:hover .hover-black {
+.navbar2:hover .hover-black, .navbar3:hover .hover-black, .navbar4:hover .hover-black {
   color: black;
 }
+
+.mobile-break {
+  display: block;
+  width: 100%;
+  height: 0;
+}
+
 
 .tooltip-link {
   position: relative;
@@ -1182,7 +1201,7 @@ iframe {
   }
 
   .text-wrapper2-linkedin, .text-wrapper2-github, .text-wrapper2-hackerrank,
-  .navbar, .navbar2, .navbar3, .google-drive {
+  .navbar, .navbar2, .navbar3, .navbar4,.google-drive {
     font-size: clamp(1.35rem, 4.5vw, 1.8rem);
     text-decoration: none;
     color: #00ffff;
@@ -1199,7 +1218,7 @@ iframe {
   .text-wrapper2-github:hover,
   .text-wrapper2-hackerrank:hover,
   .navbar:hover,
-  .navbar2:hover, .google-drive:hover {
+  .navbar2:hover, .navbar4:hover, .google-drive:hover {
     background-color: #00ffff;
     color: black;
   }
@@ -1310,6 +1329,10 @@ iframe {
   .navbar:hover .hover-black,
   .navbar2:hover .hover-black {
     color: black;
+  }
+
+  .mobile-break {
+    display: none;
   }
 
   .google-drive a {
