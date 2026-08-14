@@ -619,7 +619,7 @@ html {
 }
 
 .text-wrapper4 h2 {
-  font-size: clamp(0.85rem, 5vw, 1.5rem);
+  font-size: clamp(0.95rem, 5vw, 2rem);
 }
 
 .text-wrapper4 h3 {
