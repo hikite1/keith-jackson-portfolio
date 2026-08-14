@@ -824,6 +824,14 @@ iframe {
     display: block;
   }
 
+  .text-wrapper4 {
+    font-size: clamp(1rem, 4.5vw, 1.6rem);
+  }
+
+  .chainborder3 h3 {
+    font-size: clamp(0.85rem, 3.5vw, 1.15rem);
+  }
+
   .text-wrapper2-linkedin, .text-wrapper2-github, .text-wrapper2-hackerrank {
     font-size: clamp(1.35rem, 4.5vw, 1.8rem);
     text-decoration: none;
