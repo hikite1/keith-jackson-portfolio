@@ -1192,13 +1192,13 @@ body.ios .chainborder3 img {
   .chainborder3 {
     position: relative;
     max-width: 1000px;
-    max-height: 50%;
+    max-height: auto;
     margin: 0 auto;
   }
 
   .chainborder3 img {
     width: 100%;
-    height: auto;
+    height: 50%;
     display: block;
   }
 
