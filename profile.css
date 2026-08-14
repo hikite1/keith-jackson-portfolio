@@ -619,7 +619,7 @@ html {
 }
 
 .text-wrapper4 h2 {
-  font-size: clamp(0.95rem, 5vw, 2rem);
+  font-size: clamp(0.85rem, 5vw, 1.5rem);
 }
 
 .text-wrapper4 h3 {
@@ -1198,7 +1198,7 @@ body.ios .chainborder3 img {
 
   .chainborder3 img {
     width: 100%;
-    height: auto;
+    height: 425px;
     display: block;
   }
 
@@ -1216,7 +1216,7 @@ body.ios .chainborder3 img {
   }
 
   .text-wrapper4 h2 {
-    font-size: clamp(2rem, 4.2vw, 3.4rem);
+    font-size: clamp(2rem, 4.2vw, 3.5rem);
   }
 
   .text-wrapper4 h3 {
