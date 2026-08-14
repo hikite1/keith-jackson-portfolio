@@ -609,7 +609,7 @@ html {
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: clamp(1.5rem, 7.5vw, 2.25rem);
+  font-size: clamp(0.85rem, 5vw, 1.5rem);
   font-weight: 300;
   color: #A2DCE7;
   font-family: 'Sedgwick Ave Display', cursive;
@@ -822,14 +822,6 @@ iframe {
     width: 90%;
     height: 600px !important;
     display: block;
-  }
-
-  .text-wrapper4 {
-    font-size: clamp(.4rem, 3vw, 1rem);
-  }
-
-  .chainborder3 h3 {
-    font-size: clamp(0.85rem, 3.5vw, 1.15rem);
   }
 
   .text-wrapper2-linkedin, .text-wrapper2-github, .text-wrapper2-hackerrank {
