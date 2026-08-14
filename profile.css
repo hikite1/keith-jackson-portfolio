@@ -825,7 +825,7 @@ iframe {
   }
 
   .text-wrapper4 {
-    font-size: clamp(1rem, 4.5vw, 1.6rem);
+    font-size: clamp(.8rem, 4vw, 1.5rem);
   }
 
   .chainborder3 h3 {
