@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Keith Jackson's Profile Page</title>
+  <title>Keith Jackson - Full-Stack Developer</title>
+  <meta name="description" content="Full-stack developer portfolio - React, Next.js, PostgreSQL. Featured work: ELEV8TEK/Tipper budgeting app and KiteForge client sites.">
   <link rel="stylesheet" href="profile.css" />
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css?family=Rancho&effect=fire-animation&display=swap" rel="stylesheet">
@@ -14,217 +15,237 @@
 
   <nav class="top-navbar">
     <ul>
+      <li><a href="#featured-work">Work</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
       <li><a href="#videos">Videos</a></li>
       <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdmp-qSooc_NEqaMw-OsB4W_5C-EGwZ2GhOHuFkCgj0l8FPdQ/viewform?usp=header" target="_blank" rel="noopener noreferrer">Request Resume</a></li>
     </ul>
   </nav>
-  
+
   <div class="no-select">
-    <div class="background-video">
-      <video autoplay muted loop id="background-video">
-        <source src="images/mobile_fireBG.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
 
-    <div class="scroll-prompt" id="scrollPrompt">
-      <span>↓ Scroll Down ↓</span>
-    </div>
-
-    <div class="jumbotron">
-      <img src="images/Dragon Banner.jpg" alt="Dragon Banner" />
-      <div class="hover-text">Keith Jackson</div>
-    </div>
-
-    <div class="profile">
-      <img id="moving-image" src="images/profile1.jpg" alt="KJ Profile Photo" />
-    </div>
-
-    <div class="audio-player">
-      <label for="song-selector">Choose a song:</label>
-      <select id="song-selector" onchange="changeSong()">
-        <option value="mp3/Matisyahu-One_Day.mp3" selected>
-          One Day by Matisyahu
-        </option>
-        <option value="mp3/We_Care_Alot.mp3">We Care a Lot Cover</option>
-        <option value="mp3/Brass_Against_Mother_Danzig_cover_ft_Liza_Colby.mp3">Mother Cover by Brass Against</option>
-      </select>
-      <audio id="audio-player" controls loop style="margin-top: 1rem;">
-        <source src="mp3/Matisyahu - One Day (YouTube Version)_256k.mp3" type="audio/mpeg">
-        Your browser does not support HTML5 audio.
-      </audio>
-    </div>
-
-    <div class="chainborder" id="about" onclick="handleNotAButtonClick()">
-      <img src="images/chainFrame.png" alt="Chain Frame" />
-      <div class="text-wrapper1">
-        <h2>About Me...</h2>
-        <h3>Shortcuts to my LinkedIn, GitHub, and coding profiles.</h3>
+    <!-- HERO -->
+    <section class="hero-section">
+      <img id="hero-photo" src="images/profile1.jpg" alt="Keith Jackson" />
+      <h1>Keith Jackson</h1>
+      <p class="hero-subhead">Full-Stack Developer | Support Engineer track - React, Next.js, PostgreSQL, REST APIs</p>
+      <p class="hero-oneliner">I build and ship real web apps - from client business sites to a production fintech-style app - and I troubleshoot like someone who's spent years solving problems live, under pressure.</p>
+      <p class="hero-now">Currently: Full-stack intern @ ELEV8TEK Labs, running KiteForge, building an animated D&amp;D series.</p>
+      <div class="hero-cta-group">
+        <a href="#featured-work" class="btn-primary">View My Work</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmp-qSooc_NEqaMw-OsB4W_5C-EGwZ2GhOHuFkCgj0l8FPdQ/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="btn-secondary">Request Resume</a>
       </div>
-    </div>
+    </section>
 
-    <div class="parent-container" style="position: relative;">
-      <div class="text-wrapper2-linkedin">
-        <img src="images/in_thumbnail.png" alt="LinkedIn Thumbnail">
-        <h3>
-          <strong>My <a href="https://www.linkedin.com/in/keithjackson1976/" id="linkedin-link" onmouseover="linkedInShowPreview()" onmouseout="linkedInHidePreview()"><span style='color: blue;'>LinkedIn</span></a></strong>
-        </h3>
-        <div id="linkedin-preview" class="linkedin-preview"></div>
+    <!-- PROOF STRIP -->
+    <section class="proof-strip">
+      <div class="proof-item">
+        <strong>15+ merged PRs</strong>
+        <span>Production Next.js/React app (ELEV8TEK/Tipper)</span>
       </div>
+      <div class="proof-item">
+        <strong>3 live client sites</strong>
+        <span>Designed, built, deployed (KiteForge)</span>
+      </div>
+      <div class="proof-item">
+        <strong>&ldquo;Highly Creative&rdquo;</strong>
+        <span>Meta ad rating on managed campaigns</span>
+      </div>
+      <div class="proof-item">
+        <strong>Full-stack toolkit</strong>
+        <span>React, Node.js, PostgreSQL, REST APIs</span>
+      </div>
+    </section>
 
-      <div class="text-wrapper2-github">
-        <img src="images/github_thumbnail.png" alt="GitHub Thumbnail">
-        <h3>
-          <strong>My <a href="https://github.com/hikite1" id="github-link"><span style='color: black;'>Git</span><span style='color: white;'>Hub</span></a></strong>
-        </h3>
-        <div id="github-preview" class="github-preview"></div>
-      </div>
+    <!-- FEATURED WORK -->
+    <section id="featured-work">
+      <h2 class="section-heading">Featured Work</h2>
+      <p class="section-subheading">Real, deployed, professional - the two places I spend most of my working hours.</p>
 
-      <div class="text-wrapper2-hackerrank">
-        <img src="images/hacker_thumbnail.jpg" alt="HackerRank Thumbnail">
-        <h3>
-          <strong>My <a href="https://www.hackerrank.com/hikite1" id="hackerrank-link"><span style='color: #066b24;'>HackerRank</span></a></strong>
-        </h3>
-        <div id="hackerrank-preview" class="hackerrank-preview"></div>
+      <div class="case-study-grid">
+        <div class="case-study-card">
+          <h3>ELEV8TEK Labs - Tipper (BYOB Budgeting App)</h3>
+          <div class="case-study-meta">Full-Stack Developer Intern · Mar 2026–Present · Next.js, React, Recharts</div>
+          <p>Tipper is a personal finance / envelope-budgeting web app. I work across the stack - UI, data validation, and core financial logic.</p>
+          <ul>
+            <li>Shipped 15+ merged PRs spanning UI, data validation, and core financial logic.</li>
+            <li>Implemented unspent-balance safeguards in fund-transfer/reallocation logic and hardened numeric input handling on budget fields.</li>
+            <li>Built data visualization features with Recharts, including an expense-breakdown pie chart and audit/info-graph legends.</li>
+            <li>Refactored tax-rate handling into a single shared constants file, replacing scattered hardcoded values project-wide.</li>
+          </ul>
+          <img class="case-study-media" src="images/byob.png" alt="Tipper (BYOB) budgeting app dashboard" loading="lazy">
+        </div>
+
+        <div class="case-study-card">
+          <h3>KiteForge - Web Design &amp; Digital Marketing</h3>
+          <div class="case-study-meta">Owner · Registered DBA, LA · Mar 2026–Present</div>
+          <p>I design, build, and deploy client websites end-to-end - from requirements through launch and ongoing support - and run monthly paid social ad contracts for two bar clients, with creative consistently rated &ldquo;Highly Creative&rdquo; by Meta's ad delivery system. I'm also the sole technical point of contact for every client: fielding requests, debugging live-site issues, and translating technical changes into plain language.</p>
+          <img class="case-study-media" src="images/kiteforge.png" alt="KiteForge - Web Designs Hero Section" loading="lazy">
+          <ul class="case-study-links-list">
+            <li><a href="https://kiteforge.org/" target="_blank" rel="noopener noreferrer">KiteForge</a> - business site for my web design &amp; marketing services</li>
+            <li><a href="https://mollystoulouse.com/" target="_blank" rel="noopener noreferrer">Molly's Irish Bar</a> - client site</li>
+            <li><a href="https://toulousedive.com/" target="_blank" rel="noopener noreferrer">Toulouse Dive Bar</a> - client site</li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </section>
 
     
 
-    <div class="chainborder2" id="projects">
-      <img src="images/chainFrame.png" alt="Chain Frame" />
-      <div class="text-wrapper3">
-        <h2>My Projects...</h2>
-        <h3>LInks to my work — a React app, a Python text adventure, and generative art using Turtle graphics. </h3>
-      </div>
-    </div>
+    <!-- OTHER PROJECTS -->
+    <section id="other-projects">
+      <h2 class="section-heading">Other Projects</h2>
+      <p class="section-subheading">In progress and for fun - where I try things out.</p>
 
-    <div class="parent-container" style="position: relative;">
-      <div class="navbar">
-        <div class="dropdown">
-          <button class="dropbtn">
-            <h3>
-              <span class="logo-text">🄶🄰🄼🄴🅂</span><br>
-              <strong><span class="hover-black">My</span>
-                <span style="color: #b83789;text-decoration: underline;">Games</span></strong>
-            </h3>
-          </button>
-          <div class="dropdown-content">
-            <a href="https://acereraknroll.com/signin">AcererakNRoll</a>
-          </div>
+      <div class="project-card">
+        <span class="tag">In Progress</span>
+        <h3>AcererakNRoll</h3>
+        <p>Early-stage virtual tabletop (VTT) app - currently a functional D&amp;D character modifier calculator, built as the foundation for a full VTT platform.</p>
+        <img class="case-study-media" src="images/acereraknroll.png" alt="AcererakNRoll app dashboard" loading="lazy">
+        <p class="project-note">The live app requires sign-in</p>
+        <div class="project-links">
+          <a href="https://acereraknroll.com/signin" target="_blank" rel="noopener noreferrer">AcererakNRoll Sign-In</a>
         </div>
       </div>
 
-      <div class="navbar2">
-        <div class="dropdown2">
-          <button class="dropbtn2">
-            <div style="display: flex; flex-direction: column;">
-              <img src="images/replit_thumbnail.png" alt="Replit Thumbnail">
-              <div style="display: flex;">
-                <span class="hover-black">My</span>
-                <span style='color: rgb(222, 116, 60); text-decoration: underline;'>Replit</span>
-              </div>
-            </div>
-          </button>
-          <div class="dropdown2-content2">
-            <a href="https://replit.com/@hikite1/Adventure-Story" class="tooltip-link">
-              Adventure Story
-              <span class="tooltip-text">
-                Mobile users: For best experience, download Replit app (hikite1/Adventure-Story)
-              </span>
-            </a>
+      <div class="project-card">
+        <span class="tag">For Fun</span>
+        <h3>Trinket - Generative Art</h3>
+        <p>Python / Turtle graphics experiments in generative art.</p>
+        <div class="project-links">
+          <a href="https://trinket.io/python/a020bb6bbc1c" target="_blank" rel="noopener noreferrer">Bridge Art</a>
+          <a href="https://trinket.io/python/a90e60a66ffd" target="_blank" rel="noopener noreferrer">Random Polygons</a>
+          <a href="https://trinket.io/python/c82fa6830433" target="_blank" rel="noopener noreferrer">Recursive Fractal Tree Art</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT / SKILLS -->
+    <section id="about">
+      <h2 class="section-heading">About / Skills</h2>
+
+      <div class="skills-grid">
+        <div class="skills-category">
+          <h4>Languages &amp; Frameworks</h4>
+          <div class="skills-tags">
+            <span>JavaScript</span><span>Python</span><span>React</span><span>Next.js</span><span>Node.js</span><span>WordPress</span><span>Divi</span><span>LearnDash</span>
           </div>
+        </div>
+        <div class="skills-category">
+          <h4>Databases &amp; Tools</h4>
+          <div class="skills-tags">
+            <span>SQL</span><span>PostgreSQL</span><span>Git / GitHub</span><span>REST APIs</span><span>Recharts</span><span>Asana</span><span>Trello</span><span>Netlify</span>
+          </div>
+        </div>
+        <div class="skills-category">
+          <h4>What's harder to teach</h4>
+          <ul class="soft-skills">
+            <li>Client communication - translating technical changes into plain language</li>
+            <li>Troubleshooting live issues under pressure, solo or on a team</li>
+            <li>Agile collaboration with distributed teams (Asana, Trello)</li>
+            <li>Mentoring - 1:1 debugging help and Git/Agile onboarding for junior devs</li>
+          </ul>
         </div>
       </div>
 
-      <div class="navbar3">
-        <div class="dropdown3">
-          <button class="dropbtn3">
-            <div style="display: flex; flex-direction: column;">
-              <img src="images/trinket_thumbnail.png" alt="Trinket Thumbnail">
-              <div style="display: flex;">
-                <span class="hover-black">My&nbsp;</span>
-                <span style="text-decoration: underline;">
-                  <span style="color: yellow;">Tri</span><span style="color: blue;">nk</span><span style="color: green;">et</span>
-                </span>
-              </div>
-            </div>
-          </button>
-          <div class="dropdown3-content3">
-            <a href="https://trinket.io/python/a020bb6bbc1c" class="tooltip-link">
-              Bridge Art
-            </a>
-            <a href="https://trinket.io/python/a90e60a66ffd" class="tooltip-link">
-              Random Polygons
-            </a>
-            <a href="https://trinket.io/python/c82fa6830433" class="tooltip-link">
-              Recursive Fractal Tree Art
+      <div class="parent-container" style="position: relative;">
+        <div class="text-wrapper2-linkedin">
+          <img src="images/in_thumbnail.png" alt="LinkedIn Thumbnail">
+          <h3>
+            <strong>My <a href="https://www.linkedin.com/in/keithjackson1976/" id="linkedin-link"><span style='color: blue;'>LinkedIn</span></a></strong>
+          </h3>
+        </div>
+
+        <div class="text-wrapper2-github">
+          <img src="images/github_thumbnail.png" alt="GitHub Thumbnail">
+          <h3>
+            <strong>My <a href="https://github.com/hikite1" id="github-link"><span class="git-text">Git</span><span style='color: white;'>Hub</span></a></strong>
+          </h3>
+        </div>
+
+        <div class="text-wrapper2-hackerrank">
+          <img src="images/hacker_thumbnail.jpg" alt="HackerRank Thumbnail">
+          <h3>
+            <strong>My <a href="https://www.hackerrank.com/hikite1" id="hackerrank-link"><span style='color: #066b24;'>HackerRank</span></a></strong>
+          </h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEOS / CREATIVE SIDE -->
+    <section class="creative-section" id="videos">
+      <div class="background-video">
+        <video autoplay muted loop playsinline id="background-video">
+          <source src="images/mobile_fireBG.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="creative-overlay"></div>
+
+      <div class="creative-content">
+        <div class="chainborder3" onclick="handleNotAButtonClick()">
+          <img src="images/chainFrame.png" alt="Chain Frame" />
+          <div class="text-wrapper4">
+            <h2>Outside of code, I also produce...</h2>
+            <h3>A few personal videos and a music picker - my creative side, fully optional.</h3>
+          </div>
+        </div>
+
+        <div class="jumbotron">
+          <img src="images/Dragon Banner.jpg" alt="Dragon Banner" />
+          <div class="hover-text">Keith Jackson</div>
+        </div>
+
+        <div class="audio-player">
+          <label for="song-selector">Choose a song:</label>
+          <select id="song-selector" onchange="changeSong()">
+            <option value="mp3/Matisyahu-One_Day.mp3" selected>
+              One Day by Matisyahu
+            </option>
+            <option value="mp3/We_Care_Alot.mp3">We Care a Lot Cover</option>
+            <option value="mp3/Brass_Against_Mother_Danzig_cover_ft_Liza_Colby.mp3">Mother Cover by Brass Against</option>
+          </select>
+          <audio id="audio-player" controls loop style="margin-top: 1rem;">
+            <source src="mp3/Matisyahu-One_Day.mp3" type="audio/mpeg">
+            Your browser does not support HTML5 audio.
+          </audio>
+        </div>
+
+        <div class="parent-container" style="position: relative;">
+          <div class="google-drive">
+            <img src="images/googleDrive_thumbnail.png" alt="Google Drive Thumbnail">
+            <a href="https://drive.google.com/drive/folders/1NawMy6aATq7kZoYonQvmwXsApRRJ4Ps5?usp=drive_link">
+              Google Drive Videos
             </a>
           </div>
         </div>
-      </div>
 
-      <div class="navbar4">
-        <div class="dropdown4">
-          <button class="dropbtn4">
-            <div style="display: flex; flex-direction: column;">
-              <img src="images/KiteForgeLogo.png" alt="KiteForge Logo">
-              <div style="display: flex;">
-                <span style="text-decoration: underline;">
-                  <span style="color: #fcb900;">Kite</span><span style="color: #6B003E;">Forge</span>
-                  <span class="mobile-break"></span>
-                  <span style="color: #660E0E;"> Web</span><span style="color: #FE2D2D;"> Designs</span>
-                </span>
-              </div>
-            </div>
-          </button>
-          <div class="dropdown4-content4">
-            <a href="https://kiteforge.org/" class="tooltip-link">
-              KiteForge Business Page
-            </a>
-            <a href="https://mollystoulouse.com/" class="tooltip-link">
-              Molly's Irish Bar Website
-            </a>
-            <a href="https://toulousedive.com/" class="tooltip-link">
-              Toulouse Dive Bar Website
-            </a>
-          </div>
+        <div class="youtube-container">
+          <iframe
+            id="youtube-frame"
+            src="https://www.youtube.com/embed/348yyj_iG4s?enablejsapi=1"
+            frameborder="0"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+          <span class="tooltip-text">
+            Click the YouTube icon in the bottom-right corner to watch this or browse more videos on YouTube.
+          </span>
         </div>
       </div>
-    </div>
+    </section>
 
-
-    <div class="chainborder3" id="videos">
-      <img src="images/chainFrame.png" alt="Chain Frame" />
-      <div class="text-wrapper4">
-        <h2>My Videos...</h2>
-        <h3>A few personal videos — just a glimpse into my creative side outside of code. Not essential, just fun.</h3>
+    <!-- CONTACT / FOOTER -->
+    <footer class="site-footer">
+      <h2 class="section-heading">Let's Connect</h2>
+      <p class="section-subheading">Want the full resume or want to talk about an opening?</p>
+      <div class="hero-cta-group">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmp-qSooc_NEqaMw-OsB4W_5C-EGwZ2GhOHuFkCgj0l8FPdQ/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="btn-primary">Request Resume</a>
+        <a href="https://www.linkedin.com/in/keithjackson1976/" target="_blank" rel="noopener noreferrer" class="btn-secondary">LinkedIn</a>
+        <a href="https://github.com/hikite1" target="_blank" rel="noopener noreferrer" class="btn-secondary">GitHub</a>
       </div>
-    </div>
-
-    <div class="parent-container" style="position: relative;">
-      <div class="google-drive">
-        <img src="images/googleDrive_thumbnail.png" alt="Google Drive Thumbnail">
-        <a href="https://drive.google.com/drive/folders/1gzMGkt8KnwCWCKhSsZcIb9iN5p8Ow69n?usp=drive_link">
-          Google Drive Videos
-        </a>
-      </div>
-    </div>  
-
-    <div class="youtube-container">
-      <iframe
-        id="youtube-frame"
-        src="https://www.youtube.com/embed/348yyj_iG4s?enablejsapi=1"
-        frameborder="0"
-        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
-      <span class="tooltip-text">
-        Click the YouTube icon in the bottom-right corner to watch this or browse more videos on YouTube.      
-      </span>      
-    </div>
+      <p class="footer-copy">&copy; Keith Jackson</p>
+    </footer>
 
     <div id="not-a-button-video" class="hidden-video">
       <div class="fun-message"></div>
@@ -244,7 +265,7 @@
       window.addEventListener('load', function() {
         setTimeout(function() {
           window.scrollTo(0, 0);
-        }, 10); 
+        }, 10);
       });
     </script>
 
@@ -256,18 +277,6 @@
           audioPlayer.src = songSelector.value;
         }
       });
-    </script>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        scrollFunction ();
-      })
-    </script>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        document.getElementById('not-a-button').addEventListener('click', handleNotAButtonClick);
-      })
     </script>
 
     <script src="https://www.youtube.com/iframe_api"></script>

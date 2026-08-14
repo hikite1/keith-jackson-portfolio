@@ -11,32 +11,6 @@ function changeSong() {
     audioPlayer.play();
   }
 
-
-function scrollFunction() {
-    window.addEventListener('scroll', () => {
-        const prompt = document.getElementById('scrollPrompt');
-        if (window.scrollY > 30) {
-        prompt.style.opacity = '0';
-        prompt.style.pointerEvents = 'none';
-        } else {
-        prompt.style.opacity = '1';
-        prompt.style.pointerEvents = 'auto';
-        }        
-    });
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 function handleNotAButtonClick() {
   const container = document.getElementById('not-a-button-video');
   const video = document.getElementById('funVideo');
